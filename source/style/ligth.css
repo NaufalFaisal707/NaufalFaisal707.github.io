@@ -1,0 +1,383 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* 
+* css by Deffelovers (‎19 ‎Juli ‎2021)
+*/
+
+/* remove list style */
+li{
+    list-style: none;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Animation */
+body{
+    -webkit-animation: fade .5s ease-in-out;
+            animation: fade .5s ease-in-out;
+}
+@-webkit-keyframes fade{
+    0%{
+        opacity: 0;
+    }
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+}
+
+/* footer */
+.cl-fo{
+    padding: 20px 0;
+}
+
+/* Background size */
+.hero-ctn{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.hero-ctn img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.hero-ctn h4{
+    font-size: 25px;
+}
+.hero-ctn li{
+    font-size: 18px;
+    list-style: none;
+}
+@media screen and (max-width: 990px) {
+    .hero-ctn img{
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    .hero-ctn h4{
+        font-size: 20px;
+    }
+    .hero-ctn li{
+        font-size: 15px;
+        list-style: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .hero-ctn img{
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+    .hero-ctn h4{
+        font-size: 18px;
+    }
+    .hero-ctn li{
+        font-size: 10px;
+        list-style: none;
+    }
+}
+
+/* background procfile */
+/* Home */
+.col div#home{
+    height: 25rem;
+}
+@media screen and (max-width: 991px) {
+    .col div#home{
+        height: 15rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .col div#home{
+        height: 12rem;
+    }
+}
+
+.nav-s{
+    padding: 12px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+div.nav-s-i ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 990px) {
+    div.nav-s-i ul{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+div.nav-s-i ul li{
+    margin: 0 10px;
+}
+@media screen and (max-width: 375px){
+    div.nav-s-i ul li{
+        margin: 0;
+    }
+}
+
+div.s-col{
+    width: 50%;
+}
+@media screen and (max-width: 990px) {
+    div.s-col{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 990px){
+    div.hid {
+        display: none;
+    }
+}
+
+/* icons */
+a.bi-fb {
+    color: #1e90ff;
+    border-bottom: 2px solid transparent;
+}
+a.bi-fb:hover {
+    color: #1e90ff;
+    transform: scale(1.2);
+    border-bottom: 2px solid #1e90ff;
+}
+a.bi-fb:active {
+    color: #1e90ff;
+    transform: scale(0.8);
+    border-bottom: 2px solid #1e90ff;
+}
+
+a.bi-ig {
+    color: #b22222;
+    border-bottom: 2px solid transparent;
+}
+a.bi-ig:hover {
+    color: #b22222;
+    transform: scale(1.2);
+    border-bottom: 2px solid #b22222;
+}
+a.bi-ig:active {
+    color: #b22222;
+    transform: scale(0.8);
+    border-bottom: 2px solid #b22222;
+}
+
+a.bi-yt {
+    color: #ff0000;
+    border-bottom: 2px solid transparent;
+}
+a.bi-yt:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+    border-bottom: 2px solid #ff0000;
+}
+a.bi-yt:active {
+    color: #ff0000;
+    transform: scale(0.8);
+    border-bottom: 2px solid #ff0000;
+}
+
+a.bi-em {
+    color: #008000;
+    border-bottom: 2px solid transparent;
+}
+a.bi-em:hover {
+    color: #008000;
+    transform: scale(1.2);
+    border-bottom: 2px solid #008000;
+}
+a.bi-em:active {
+    color: #008000;
+    transform: scale(0.8);
+    border-bottom: 2px solid #008000;
+}
+
+a.bi-tw {
+    color: #1e90ff;
+    border-bottom: 2px solid transparent;
+}
+a.bi-tw:hover {
+    color: #1e90ff;
+    transform: scale(1.2);
+    border-bottom: 2px solid #1e90ff;
+}
+a.bi-tw:active {
+    color: #1e90ff;
+    transform: scale(0.8);
+    border-bottom: 2px solid #1e90ff;
+}
+
+a.bi-rs {
+    color: #ffd61e;
+    border-bottom: 2px solid transparent;
+}
+a.bi-rs:hover {
+    color: #ffd61e;
+    transform: scale(1.2);
+    border-bottom: 2px solid #ffd61e;
+}
+a.bi-rs:active {
+    color: #ffd61e;
+    transform: scale(0.8);
+    border-bottom: 2px solid #ffd61e;
+}
+
+/*  */
+
+a.bi-fb-f {
+    display: block;
+    color: #000000;
+}
+a.bi-fb-f:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+a.bi-fb-f:active {
+    color: #1e90ff;
+    transform: scale(1);
+}
+
+a.bi-ig-f {
+    display: block;
+    color: #000000;
+}
+a.bi-ig-f:hover {
+    color: #b22222;
+    transform: scale(1.1);
+}
+a.bi-ig-f:active {
+    color: #b22222;
+    transform: scale(1);
+}
+
+a.bi-yt-f {
+    display: block;
+    color: #000000;
+}
+a.bi-yt-f:hover {
+    color: #ff0000;
+    transform: scale(1.1);
+}
+a.bi-yt-f:active {
+    color: #ff0000;
+    transform: scale(1);
+}
+
+a.bi-em-f {
+    display: block;
+    color: #000000;
+}
+a.bi-em-f:hover {
+    color: #008000;
+    transform: scale(1.1);
+}
+a.bi-em-f:active {
+    color: #008000;
+    transform: scale(1);
+}
+
+a.bi-tw-f {
+    display: block;
+    color: #000000;
+}
+a.bi-tw-f:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
+}
+a.bi-tw-f:active {
+    color: #1e90ff;
+    transform: scale(1);
+}
+
+a.bi-rs-f {
+    display: block;
+
+    color: #000000;
+}
+a.bi-rs-f:hover {
+    color: #ffd61e;
+    transform: scale(1.1);
+}
+a.bi-rs-f:active {
+    color: #ffd61e;
+    transform: scale(1);
+}
+
+.nav-s{
+    padding: 12px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+div.nav-s-i ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 990px) {
+    div.nav-s-i ul{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+div.nav-s-i ul li{
+    margin: 0 10px;
+}
+@media screen and (max-width: 375px){
+    div.nav-s-i ul li{
+        margin: 0;
+    }
+}
+
+div.s-col{
+    width: 50%;
+}
+@media screen and (max-width: 990px) {
+    div.s-col{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 990px){
+    div.hid {
+        display: none;
+    }
+}
+
