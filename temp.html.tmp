@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/source/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/source/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/source/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/source/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/source/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/source/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/source/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/source/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/source/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/source/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/source/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/source/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/source/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./source/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/source/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Ini gk terlalu penting -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SCRIPT -->
+    <script src="data:text/html;base64,Y29uc3QgcHJvZ3Jlc3MgPSAnZGF0YTp0ZXh0L2h0bWw7YmFzZTY0LFBHUnBkaUJqYkdGemN6MGlaQzFtYkdWNElHcDFjM1JwWm5rdFkyOXVkR1Z1ZEMxalpXNTBaWElnWVd4cFoyNHRhWFJsYlhNdFkyVnVkR1Z5SUhBdE5TSStQR1JwZGlCamJHRnpjejBpYzNCcGJtNWxjaTFpYjNKa1pYSWlJSEp2YkdVOUluTjBZWFIxY3lJK1BITndZVzRnWTJ4aGMzTTlJblpwYzNWaGJHeDVMV2hwWkdSbGJpSStURzloWkdsdVp5NHVMand2YzNCaGJqNDhMMlJwZGo0OEwyUnBkajQ9Jw=="></script>
+    <script src="/source/CDN/jquery/jquery@3.6.0.min.js"></script>
+    <script src="/source/CDN/bootstrap/bootstrap@5.0.2.bundle.min.js"></script>
+    <!-- CSS-->
+    <link rel="stylesheet" href="./source/style/ligth.css">
+    <link rel="stylesheet" href="./source/CDN/bootstrap/bootstrap-icons@1.8.1.css">
+    <link rel="stylesheet" href="./source/CDN/bootstrap/bootstrap@5.0.2.css">
+    <!-- FONT -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');</style> 
+</head>
+<body style="background-color: #e2e2e2;">
+    <div class="container">
+        <!-- WELCOME CARD -->
+        <div class="col-12 my-2">
+            <div class="rounded-3 shadow-sm position-relative overflow-hidden" style="background-color: #fff;">
+                <div class="images" style="filter: blur(4px);background-image: url('./source/media/bg/bg-6.jpg');background-size: cover;background-repeat: no-repeat;background-position: center;background-color: #fff;">
+                </div>
+                <div id="text-card" class="text-card text-center position-absolute start-50 translate-middle">
+                    <h4 class="text-white fw-bold">W E L C O M E !</h4>
+                    <h6 class="text-white">Official Naufal Faisal Portofolio site <i class="bi bi-patch-check-fill"></i></h6>
+                </div>
+                <div class="position-absolute shadow-sm" style="border-top-left-radius: .3rem;bottom: 0;right: 0px;padding: 5px 15px;background-color: #fff;">
+                    <a id="tab-menu" class="cursor-pointer"><span id="text-menu" class="">Buka menu</span></a>
+                </div>
+                <div id="respond-menu" class="g-animation" style="height: 0;background-color: blanchedalmond;">
+                    cok
+                </div>
+            </div>
+        </div>
+        <!-- Content Loader -->
+        <div id="root">
+            <!-- Jika browser tidak mendukung JavaScript -->
+            <noscript class="d-flex justify-content-center align-items-center text-center" style="height: 300px;">Sepertinya browser yang di gunakan tidak mendukung JavaScript...</noscript>
+        </div>
+    </div>
+    <script>
+        $('#root').load(progress);
+        $(document).ready(() => {
+            document.title = 'Naufal Faisal Portofolio';
+            $('#root').load('/source/script/defaults.html');
+            $('[data-age]').html(new Date().getFullYear() - 2005);
+            $('#tab-menu').click(() => {
+                $('#text-menu').html() == 'Buka menu' ? $('#text-menu').html('Tutup menu') : $('#text-menu').html('Buka menu');
+                $('#respond-menu').toggleClass('pb-max');
+            });
+        });
+    </script>
+</body>
+</html>
