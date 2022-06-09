@@ -31,51 +31,162 @@
     <!-- SCRIPT -->
     <script src="./source/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
     <script src="./source/lib/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src="data:text/html;base64,Y29uc3QgbG9hZCA9IGA8ZGl2IGNsYXNzPSJteS00IHBvc2l0aW9uLWFic29sdXRlIHRvcC01MCBzdGFydC01MCB0cmFuc2xhdGUtbWlkZGxlIj48ZGl2IGNsYXNzPSJmbGV4LWNvbHVtbiB0ZXh0LWNlbnRlciI+PGRpdiBjbGFzcz0ic3Bpbm5lci1ib3JkZXIiIHJvbGU9InN0YXR1cyI+PHNwYW4gY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+TG9hZGluZy4uLjwvc3Bhbj48L2Rpdj48ZGl2Pk1lbXVhdCBIYWxhbWFuLi4uPC9kaXY+PC9kaXY+PC9kaXY+YA=="></script>
+    <script src="data:text/html;base64,Y29uc3QgbG9hZCA9IGA8ZGl2IGNsYXNzPSJteS00IGQtZmxleCBqdXN0aWZ5LWNvbnRlbnQtY2VudGVyIj48ZGl2IGNsYXNzPSJmbGV4LWNvbHVtbiB0ZXh0LWNlbnRlciI+PGRpdiBjbGFzcz0ic3Bpbm5lci1ib3JkZXIiIHJvbGU9InN0YXR1cyI+PHNwYW4gY2xhc3M9InZpc3VhbGx5LWhpZGRlbiI+TG9hZGluZy4uLjwvc3Bhbj48L2Rpdj48ZGl2Pk1lbXVhdCBIYWxhbWFuLi4uPC9kaXY+PC9kaXY+PC9kaXY+YA=="></script>
     <title>Naufal Faisal Portofolio Site</title>
 </head>
 <body class="bg-dark bg-opacity-10">
     <div class="container">
-        <!--  -->
-        <div class="col-12 my-2">
+        <!-- welcome card -->
+        <div class="col-12 pt-2">
             <div class="rounded-3 shadow-sm position-relative overflow-hidden">
-                <div class="images bg-white" style="filter: blur(4px);background-image: url('./source/media/bg/bg-6.jpg');background-size: cover;background-repeat: no-repeat;background-position: center;"></div>
-                <div id="text-card" class="text-card text-center position-absolute start-50 translate-middle">
-                    <div class="text-white fw-bold">W E L C O M E !</div>
-                    <div class="text-white">Official Naufal Faisal Portofolio site <i class="bi bi-patch-check-fill"></i></div>
+                <div id="bg-img" class="col-12 crd-img bg-white"></div>
+                <div id="text-card" class="crd-text text-center position-absolute start-50 translate-middle">
+                    <div id="text-bg-card" class="text-white fw-bold"></div>
+                    <div id="desc-bg-card" class="text-white"></div>
                 </div>
                 <div class="position-absolute shadow-sm bg-white end-0 bottom-0 py-1 px-3" style="border-top-left-radius: .3rem;">
                     <a id="tab-menu" class="cursor-pointer"><span id="text-menu">Buka menu</span></a>
                 </div>
-                <div id="respond-menu" class="g-animation bg-white" style="height: 0;">
-                    <div class="d-flex flex-column justify-content-center align-items-center" style="height: 200px;">
-                        <img width="100" height="100" src="https://c.tenor.com/kFnJ7flTRLMAAAAd/among-us-dance.gif" alt="">
-                        <div>Belum jadi, lagi males mau ujian...</div>
+                <div id="respond-menu" class="bg-white" style="display: none;">
+                    <div class="row justify-content-center">
+                        <!-- Menu tambahan -->
+                        <div class="col-12 my-2 pb-4">
+                            <div class="rounded-3 bg-white px-4">
+                                <div class="row flex-column">
+                                    <div class="col">
+                                        <div class="text-center fw-bold py-3">Menu Tambahan <i class="bi bi-balloon-fill"></i></div>
+                                    </div>
+                                    <li>Navigasi:</li>
+                                    <div class="my-2">
+                                        <button id="nav-tab" type="button" class="my-1 btn btn-sm btn-outline-dark"><i class="bi bi-house"></i> Halaman Utama</button>
+                                        <button id="nav-tab" type="button" class="my-1 btn btn-sm btn-outline-dark"><i class="bi bi-tools"></i> Halaman Pelaratan</button>
+                                        <button id="nav-tab" type="button" class="my-1 btn btn-sm btn-outline-dark"><i class="bi bi-box-seam"></i> Proyek Saya</button>
+                                        <button id="nav-tab" type="button" class="my-1 btn btn-sm btn-outline-dark"><i class="bi bi-info-circle"></i> Tentang Situs</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                        <!--  -->
                     </div>
                 </div>
             </div>
         </div>
+        <!-- root -->
         <div id="root">
             <!-- jika browser yang di gunakan sudah usang -->
-            <noscript class="my-4 position-absolute top-50 start-50 translate-middle text-center">
-                <div class="flex-column">
+            <noscript class="my-4 d-flex justify-content-center">
+                <div class="flex-column text-center">
                     <i class="fs-1 bi bi-code-slash"></i>
-                    <div class="fs-5">Sepertinya Browser yang di gunakan sudah usang, Gunakan Browser versi terbaru untuk membuka situs ini.</div>
+                    <div class="fs-5">Sepertinya Browser yang di gunakan sudah usang, Gunakan Browser versi terbaru untuk menggunakan situs ini.</div>
                 </div>
             </noscript>
         </div>
     </div>
-    <script>
-        $('#root').html(load);
-        $(document).ready(() => {
-            document.title = 'Naufal Faisal Portofolio';
-            $('#root').load('/source/loader/defaults.html');
-            $('#tab-menu').click(() => {
-                $('#text-menu').html() == 'Buka menu' ? $('#text-menu').html('Tutup menu') : $('#text-menu').html('Buka menu');
-                $('#respond-menu').toggleClass('pb-max');
-            });
-            // $('[data-age]').html(new Date().getFullYear() - 2005);
-        });
-    </script>
 </body>
+<script>
+    document.getElementById('root').innerHTML = load;
+    // 
+    // Config untuk session storage yang berfungsi menyimpan data sampai tab di tutup
+    // 
+    sessionStorage.getItem('nav_tab')
+        ? JSON.parse(sessionStorage.getItem('nav_tab')).tab == 1
+            ? $('#nav-tab:nth-child(1)').addClass('active')
+                + $('#root').load('./source/loader/first-page.html')
+                + $('#text-bg-card').html('W E L C O M E !')
+                + $('#desc-bg-card').html('Official Naufal Faisal Portofolio site <i class="bi bi-patch-check-fill"></i>')
+                + $('#bg-img').css('background-image', 'url("./source/media/bg/bg-panorama-0.jpg")')
+        : JSON.parse(sessionStorage.getItem('nav_tab')).tab == 2
+            ? $('#nav-tab:nth-child(2)').addClass('active')
+                + $('#root').load('./source/loader/tools-page.html')
+                + $('#text-bg-card').html('<i class="bi bi-tools"></i> Halaman Pelaratan')
+                + $('#desc-bg-card').html('Fitur yang saya buat dari hasil percobaan di waktu luang')
+                + $('#bg-img').css('background-image', 'url("./source/media/bg/bg-program-0.jpg")')
+        : JSON.parse(sessionStorage.getItem('nav_tab')).tab == 3
+            ? $('#nav-tab:nth-child(3)').addClass('active')
+                + $('#root').load('./source/loader/project-page.html')
+                + $('#text-bg-card').html('<i class="bi bi-box-seam"></i> Proyek Saya')
+                + $('#desc-bg-card').html('Proyek yang saya buat di waktu luang')
+                + $('#bg-img').css('background-image', 'url("./source/media/bg/bg-program-0.jpg")')
+        : JSON.parse(sessionStorage.getItem('nav_tab')).tab == 4
+            ? $('#nav-tab:nth-child(4)').addClass('active')
+                + $('#root').load('./source/loader/about-page.html')
+                + $('#text-bg-card').html('<i class="bi bi-info-circle"></i> Tentang Situs')
+                + $('#desc-bg-card').html('Informasi & hal lainya tentang situs ini')
+                + $('#bg-img').css('background-image', 'url("./source/media/bg/bg-program-0.jpg")')
+        : sessionStorage.setItem('nav_tab', JSON.stringify({tab: 1})) + location.reload()
+    : sessionStorage.setItem('nav_tab', JSON.stringify({tab: 1})) + location.reload()
+    // 
+    // jika Document sudah siap
+    // 
+    $(document).ready(() => {
+        $('#nav-tab:nth-child(1)').click(() => {
+            $('#nav-tab:nth-child(1)').addClass('active');
+            $('#nav-tab:nth-child(2)').removeClass('active');
+            $('#nav-tab:nth-child(3)').removeClass('active');
+            $('#nav-tab:nth-child(4)').removeClass('active');
+            // 
+            $('#root').html(load);
+            $('#root').load('./source/loader/first-page.html');
+            // 
+            $('#text-bg-card').html('W E L C O M E !');
+            $('#desc-bg-card').html('Official Naufal Faisal Portofolio site <i class="bi bi-patch-check-fill"></i>');
+            // 
+            $('#bg-img').css('background-image', 'url("./source/media/bg/bg-panorama-0.jpg")')
+            // 
+            sessionStorage.setItem('nav_tab', JSON.stringify({tab: 1}))
+        });
+        $('#nav-tab:nth-child(2)').click(() => {
+            $('#nav-tab:nth-child(2)').addClass('active');
+            $('#nav-tab:nth-child(3)').removeClass('active');
+            $('#nav-tab:nth-child(4)').removeClass('active');
+            $('#nav-tab:nth-child(1)').removeClass('active');
+            // 
+            $('#root').html(load);
+            $('#root').load('./source/loader/tools-page.html');
+            // 
+            $('#text-bg-card').html('<i class="bi bi-tools"></i> Halaman Pelaratan');
+            $('#desc-bg-card').html('Fitur yang saya buat dari hasil percobaan di waktu luang');
+            // 
+            $('#bg-img').css('background-image', 'url("./source/media/bg/bg-program-0.jpg")');
+            // 
+            sessionStorage.setItem('nav_tab', JSON.stringify({tab: 2}))
+        });
+        $('#nav-tab:nth-child(3)').click(() => {
+            $('#nav-tab:nth-child(3)').addClass('active');
+            $('#nav-tab:nth-child(4)').removeClass('active');
+            $('#nav-tab:nth-child(1)').removeClass('active');
+            $('#nav-tab:nth-child(2)').removeClass('active');
+            // 
+            $('#root').html(load);
+            $('#root').load('./source/loader/project-page.html');
+            // 
+            $('#text-bg-card').html('<i class="bi bi-box-seam"></i> Proyek Saya');
+            $('#desc-bg-card').html('Fitur yang saya buat di waktu luang');
+            // 
+            $('#bg-img').css('background-image', 'url("./source/media/bg/bg-program-0.jpg")');
+            // 
+            sessionStorage.setItem('nav_tab', JSON.stringify({tab: 3}))
+        });
+        $('#nav-tab:nth-child(4)').click(() => {
+            $('#nav-tab:nth-child(4)').addClass('active');
+            $('#nav-tab:nth-child(1)').removeClass('active');
+            $('#nav-tab:nth-child(2)').removeClass('active');
+            $('#nav-tab:nth-child(3)').removeClass('active');
+            // 
+            $('#root').html(load);
+            $('#root').load('./source/loader/about-page.html');
+            // 
+            $('#text-bg-card').html('<i class="bi bi-info-circle"></i> Tentang Situs');
+            $('#desc-bg-card').html('Informasi & hal lainya dari situs ini');
+            // 
+            $('#bg-img').css('background-image', 'url("./source/media/bg/bg-program-0.jpg")');
+            // 
+            sessionStorage.setItem('nav_tab', JSON.stringify({tab: 4}))
+        });
+        $('#tab-menu').click(() => {
+            $('#respond-menu').slideToggle(500);
+            $('#text-menu').html() == 'Buka menu' ? $('#text-menu').html('Tutup menu') : $('#text-menu').html('Buka menu');
+        });
+    })
+</script>
 </html>

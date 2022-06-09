@@ -1,3 +1,61 @@
+    <div class="container">
+        <div class="col-12 ">
+            <div class="rounded-3 shadow-sm position-relative overflow-hidden">
+                <div class="crd-img bg-white" style="filter: blur(4px);background-image: url('./source/media/bg/bg-6.jpg');background-size: cover;background-repeat: no-repeat;background-position: center;"></div>
+                <div id="text-card" class="crd-text text-center position-absolute start-50 translate-middle">
+                    <div class="text-white fw-bold">W E L C O M E !</div>
+                    <div class="text-white">Official Naufal Faisal Portofolio site <i class="bi bi-patch-check-fill"></i></div>
+                </div>
+                <div class="position-absolute shadow-sm bg-white end-0 bottom-0 py-1 px-3" style="border-top-left-radius: .3rem;">
+                    <a id="tab-menu" class="cursor-pointer"><span id="text-menu">Buka menu</span></a>
+                </div>
+                <div id="respond-menu" class="g-animation bg-white" style="height: 0;">
+                    <div class="row d-flex justify-content-center align-items-center" style="height: 200px;">
+                        <div class="col-12" style="background-color: antiquewhite;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="root">
+            <noscript class="my-4 position-absolute top-50 start-50 translate-middle text-center">
+                <div class="flex-column">
+                    <i class="fs-1 bi bi-code-slash"></i>
+                    <div class="fs-5">Sepertinya Browser yang di gunakan sudah usang, Gunakan Browser versi terbaru untuk membuka situs ini.</div>
+                </div>
+            </noscript>
+        </div>
+    </div>
+    <script>
+        $('#root').html(load);
+        document.title = 'Naufal Faisal Portofolio';
+        $(document).ready(() => {
+            $('#root').load('/source/loader/defaults.html');
+            $('#tab-menu').click(() => {
+                $('#text-menu').html() == 'Buka menu' ? $('#text-menu').html('Tutup menu') : $('#text-menu').html('Buka menu');
+                $('#respond-menu').toggleClass('pb-max');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
