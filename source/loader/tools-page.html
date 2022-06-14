@@ -4,8 +4,80 @@
 -->
 <!-- Text to QR -->
 <div class="col-12 my-2">
-    <div class="about rounded-3 shadow-sm bg-white py-3 px-4">
-        <div class="fw-bold text-center">Text To QR Code <i class="bi bi-qr-code"></i></div>
-        <div>Fitur ini sedang di kembangkan</div>
+    <div class="about rounded-3 shadow-sm bg-white py-4">
+        <div class="fw-bold text-center mb-4">Text To QR Code <i class="bi bi-qr-code"></i></div>
+        <div class="d-flex flex-column-reverse flex-lg-row align-items-center text-center">
+            <div class="col-12 col-lg px-4 my-2">
+                <div class="input-group">
+                    <input qr-val type="text" class="form-control" id="user" name="user" placeholder="Tempelkan text/URL di sini.">
+                    <button qr-run class="btn btn-outline-dark" type="button" id="button-addon2" disabled><i class="bi bi-caret-right"></i></button>
+                    <button qr-cls class="btn btn-outline-dark" type="button" id="button-addon2"><i class="bi bi-arrow-repeat"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-lg px-4 my-2 text-center">
+                <div svg-viewer>
+                    <svg width="200" height="200" viewBox="0 0 285.75 285.75" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(1 0 0 -1 0 285.75)"><rect transform="scale(1 -1)" x="36.065" y="-224.02" width="213.62" height="213.62" rx="1.964" ry="1.964" fill="#fff" stroke="#000" stroke-linejoin="bevel" stroke-miterlimit="45.2" stroke-width="3.928" style="paint-order:stroke fill markers"/><rect x="34.101" y="235.21" width="217.55" height="42.105" rx="4.486" ry="4.486"/><text transform="scale(1 -1)" x="53.616" y="-248.667" font-family="'Mukti Narrow'" font-size="21.151" letter-spacing="4.23" stroke-width=".529" style="line-height:1.25" xml:space="preserve"><tspan x="53.616" y="-248.667" fill="#fff">SCAN DI SINI</tspan></text><image transform="matrix(1.6007 0 0 -1.6007 -48.704 -84.698)" x="64.557" y="-181.27" width="110.26" height="110.26" svg-place preserveAspectRatio="none"/></g></svg>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<script src="./source/lib/qr-code/qrcode.js"></script>
+<!-- <script>
+    const qr = (theme) => theme == 0
+        ? `none`
+    : theme == 1
+        ? 'PHN2ZyBzdmctZnJhbWUgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI4NS43NSAyODUuNzUiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMzYuMDY1IiB5PSIxMC4zOTgiIHdpZHRoPSIyMTMuNjIiIGhlaWdodD0iMjEzLjYyIiByeD0iMS45NjM5IiByeT0iMS45NjM5IiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiIHN0cm9rZS1taXRlcmxpbWl0PSI0NS4yIiBzdHJva2Utd2lkdGg9IjMuOTI3OCIgc3R5bGU9InBhaW50LW9yZGVyOnN0cm9rZSBmaWxsIG1hcmtlcnMiLz48cmVjdCB4PSIzNC4xMDEiIHk9IjIzNS4yMSIgd2lkdGg9IjIxNy41NSIgaGVpZ2h0PSI0Mi4xMDUiIHJ4PSI0LjQ4NTUiIHJ5PSI0LjQ4NTUiIHN0cm9rZS13aWR0aD0iLjExMzI3Ii8+PHRleHQgeD0iNTMuNjE2MDg5IiB5PSIyNjMuODU4ODkiIGZvbnQtZmFtaWx5PSInTXVrdGkgTmFycm93JyIgZm9udC1zaXplPSIyMS4xNTFweCIgbGV0dGVyLXNwYWNpbmc9IjQuMjMwMnB4IiBzdHJva2Utd2lkdGg9Ii41Mjg3NyIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEuMjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjx0c3BhbiB4PSI1My42MTYwODkiIHk9IjI2My44NTg4OSIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IidNdWt0aSBOYXJyb3cnIiBzdHJva2Utd2lkdGg9Ii41Mjg3NyI+U0NBTiBESSBTSU5JPC90c3Bhbj48L3RleHQ+PGcgdHJhbnNmb3JtPSJtYXRyaXgoMS42MDA3IDAgMCAxLjYwMDcgLTQ4LjcwNCAtODQuNjk4KSI+PGltYWdlIHN2Zy1wbGFjZSB4PSI2NC41NTciIHk9IjcxLjAwOCIgd2lkdGg9IjExMC4yNiIgaGVpZ2h0PSIxMTAuMjYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiLz48L2c+PC9zdmc+'
+    : theme == 2
+        ? 'PHN2ZyBzdmctZnJhbWUgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAyODUuNzUgMjg1Ljc1IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDAgMjg1Ljc1KSI+PHJlY3QgdHJhbnNmb3JtPSJzY2FsZSgxIC0xKSIgeD0iMzYuMDY1IiB5PSItMjI0LjAyIiB3aWR0aD0iMjEzLjYyIiBoZWlnaHQ9IjIxMy42MiIgcng9IjEuOTY0IiByeT0iMS45NjQiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVqb2luPSJiZXZlbCIgc3Ryb2tlLW1pdGVybGltaXQ9IjQ1LjIiIHN0cm9rZS13aWR0aD0iMy45MjgiIHN0eWxlPSJwYWludC1vcmRlcjpzdHJva2UgZmlsbCBtYXJrZXJzIi8+PHJlY3QgeD0iMzQuMTAxIiB5PSIyMzUuMjEiIHdpZHRoPSIyMTcuNTUiIGhlaWdodD0iNDIuMTA1IiByeD0iNC40ODYiIHJ5PSI0LjQ4NiIvPjx0ZXh0IHRyYW5zZm9ybT0ic2NhbGUoMSAtMSkiIHg9IjUzLjYxNiIgeT0iLTI0OC42NjciIGZvbnQtZmFtaWx5PSInTXVrdGkgTmFycm93JyIgZm9udC1zaXplPSIyMS4xNTEiIGxldHRlci1zcGFjaW5nPSI0LjIzIiBzdHJva2Utd2lkdGg9Ii41MjkiIHN0eWxlPSJsaW5lLWhlaWdodDoxLjI1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48dHNwYW4geD0iNTMuNjE2IiB5PSItMjQ4LjY2NyIgZmlsbD0iI2ZmZiI+U0NBTiBESSBTSU5JPC90c3Bhbj48L3RleHQ+PGltYWdlIHRyYW5zZm9ybT0ibWF0cml4KDEuNjAwNyAwIDAgLTEuNjAwNyAtNDguNzA0IC04NC42OTgpIiB4PSI2NC41NTciIHk9Ii0xODEuMjciIHdpZHRoPSIxMTAuMjYiIGhlaWdodD0iMTEwLjI2IiBzdmctcGxhY2UgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIvPjwvZz48L3N2Zz4='
+    : 'hanya ada 2 theme'
+</script> -->
+<script>
+    $('[qr-cls]').click(() => $('[qr-val]').val('') + $('[svg-place]').removeAttr('href') + $('[qr-run]').attr('disabled', true))
+    $('[qr-val]').keyup(() => $('[qr-val]').val().length > 0 
+        ? $('[qr-run]').attr('disabled', false)
+    : $('[qr-run]').attr('disabled', true))
+    $('[qr-run]').click(() => $('[svg-place]').attr('href', 'data:image/svg+xml;base64,' + btoa(new QRCode({content: $('[qr-val]').val(), padding: 0, width: 10, height: 10, color: '#000', background: '#fff'}).svg())))
+
+    // 
+    // $('[qr-run]').click(() =>{
+    //     const img = new Image()
+    //     img.onload = function(){
+    //         const canvas = document.createElement('canvas')
+    //         const context = canvas.getContext('2d')
+    //         // 
+    //         canvas.width = 1080
+    //         canvas.height= 1080
+    //         context.drawImage(img, 0,0, 1080, 1080)
+    //     }
+    //     img.src = URL.createObjectURL(new Blob([$('[svg-viewer]').html()], {type: 'image/svg+xml'}))
+    // })
+    // console.log(btoa(new QRCode({content: 'tai', padding: 0, width: 10, height: 10, color: '#000', background: '#fff'}).svg()));
+
+
+
+    
+    
+    
+    
+    // $('[qr-run]').click(() => $('[qr-val]').val() > 0 
+    //     ? $('[qr-code]').attr('src', URL.createObjectURL(new Blob([new QRCode({content: $('[qr-val]').val(), padding: 2.4, width: 128, height: 128, color: '#000', background: '#fff'}).svg()], {type: 'image/svg+xml'}))) 
+    // : 'no'
+    // )
+    // console.log(
+    //     new QRCode({content: 'tai', padding: 0, width: 200, height: 200, color: '#000', background: '#fff'}).svg()
+    // );
+    
+
+
+
+
+
+
+// let canva = document.getElementById('canv').getContext('2d')
+// let img = document.getElementById('imags')
+// canva.drawImage(img, 0, 0)
+// // img.src = 
+// console.log()
+
+</script>

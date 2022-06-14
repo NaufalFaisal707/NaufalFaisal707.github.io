@@ -9,6 +9,9 @@
 .i-br-bm-dark:hover i {border-bottom: 2px solid var(--bs-dark)}
 /* .i-br-bm-light:hover i {border-bottom: 2px solid var(--bs-light)} */
 
+/*  */
+.img-cnfg {aspect-ratio: 1/1;background-size: cover;background-position: center;background-repeat: no-repeat;}
+
 /* cursor global */
 .cursor-pointer {cursor: pointer;}
 
