@@ -1,2 +1,4 @@
 - Merender index.html dulu sampai selesai
 - render konten berikutnya
+
+- qr tinggal ganti trigger ganti tema
