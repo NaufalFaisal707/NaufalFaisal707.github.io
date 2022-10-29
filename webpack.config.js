@@ -6,6 +6,7 @@ module.exports = {
     mode: 'production',
     entry: './src/app.js',
     output: {
+        path: path.resolve(__dirname, 'docs'),
         filename: 'src/js/[hash].js',
         clean: true
     },
