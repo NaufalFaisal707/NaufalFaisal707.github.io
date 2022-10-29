@@ -1,17 +1,37 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './webpack/index.js',
-    plugins: [new HtmlWebpackPlugin({
-        template: './webpack/html/index.html'
-    })],
+    mode: 'production',
+    entry: './src/app.js',
+    output: {
+        filename: 'src/js/[hash].js',
+        clean: true
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/template.html',
+            favicon: './src/html/favicon.ico'
+        })
+    ],
     module: {
         rules: [
-            {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"]
-            }
-        ],
+
+            // css management
+            {test: /\.css$/i, use: ['style-loader', 'css-loader']}
+        ]
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'src'),
+        },
+        // compress: true,
+        port: 9000,
+        liveReload: true
     },
 }
