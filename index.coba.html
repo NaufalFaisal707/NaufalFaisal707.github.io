@@ -6,39 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
-        @font-face {
-            font-family: own;
-            src: url(./src/asset/fonts/Z003-MediumItalic.otf);
-        }
+        @import './src/css/dracula-color-palette.css';
+        @import './src/css/default.css';
     </style>
-    <title>Document</title>
+    <title>tes web</title>
 </head>
-<body class="bg-dark bg-opacity-10">
-    <nav class="fixed-top navbar bg-light shadow-sm">
-        <div class="container d-flex justify-content-between align-items-center p-1">
-            <div class="fs-4" style="font-family: own;">naufal.f</div>
-            <div>
-                <a class="" href="#1">fokus 1</a>
-                <a class="" href="#2">fokus 2</a>
-                <a class="" href="#3">fokus 3</a>
-                <a class="" href="#4">fokus 4</a>
+<body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Naufal.F</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kemampuan & Keahlian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sertifikat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontak Saya</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <div style="scroll-behavior: smooth; scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll;">
-        <div id="1" style="scroll-snap-align: center; padding-top: 3.6rem;height: 100vh; background-color: aqua;">
-            <h1 class="text-center">anjay</h1>
+    <!-- body -->
+    <!-- div image -->
+    <section>
+        <div class="banner-img">
+            <!-- div content -->
+            <div class="vh-100 text-white d-flex justify-content-center align-items-center">
+                <div class="container d-flex flex-lg-row flex-column-reverse">
+                    <div class="col bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde dignissimos
+                        sunt blanditiis id doloribus molestiae officiis corrupti dolores perspiciatis, quasi laudantium incidunt
+                        minima nisi beatae dicta aut ab doloremque, tenetur, deserunt autem! Repellendus minima quam accusantium
+                        consequuntur ex minus dolore! Placeat consequatur tempore atque sint eum id ducimus exercitationem!
+                    </div>
+                    <div class="col bg-danger">sasw</div>
+                </div>
+            </div>
         </div>
-        <div id="2" style="scroll-snap-align: center; padding-top: 3.6rem;height: 100vh; background-color: brown;">
-            <h1 class="text-center">bisa</h1>
+        <div>
+
         </div>
-        <div id="3" style="scroll-snap-align: center; padding-top: 3.6rem;height: 100vh; background-color: bisque;">
-            <h1 class="text-center">gini</h1>
-        </div>
-        <div id="4" style="scroll-snap-align: center; padding-top: 3.6rem;height: 100vh; background-color: burlywood;">
-            <h1 class="text-center">cuy</h1>
-        </div>
-    </div>
+    </section>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

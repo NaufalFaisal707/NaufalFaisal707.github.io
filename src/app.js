@@ -1,26 +1,27 @@
 require('./css/default.css');
+require('bootstrap/dist/js/bootstrap.bundle')
 const web = require('./js/profile');
 
 $(() => {
 
     // Page title
-    document.title = web.title
-
-    // Body bone
-    $('body')
-        .addClass('bg-dark bg-opacity-10')
-        .append('<nav></nav>')
-        .append(Array(4).fill('<div></div>'))
+    document.title = web.webTitle()
 
     // Body structure
+    $('body')
+        .addClass('bg-dark bg-opacity-10')
+        .html('<nav></nav>')
+        .append(Array(4).fill('<div></div>'))
 
     // nav
     $('body')
         .children('nav')
-            .addClass('this nav')
+            .text('anjay coy')
     
+
+    // console.log(web.ownerAge());
     // div
-    console.log($('body').children('div'))
+    // console.log($('body').children('div'))
 
     // $('nav')
     // $('div:nth-child(1)')

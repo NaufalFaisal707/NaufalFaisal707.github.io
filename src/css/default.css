@@ -1,0 +1,27 @@
+@import './dracula-color-palette.css';
+
+body {
+    background-color: var(--background-color);
+}
+
+.nav-link:hover {
+    transition: .8;
+    color: var(--pink);
+}
+
+/* .banner-img {
+    background-image: url('../asset/img/pic3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* .banner {
+    height: calc(100vh - 20vh);
+}
+
+@media screen  and (max-height: 768px){
+    .banner {
+        height: 100vh;
+    }
+} */

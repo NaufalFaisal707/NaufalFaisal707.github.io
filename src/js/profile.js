@@ -1,12 +1,24 @@
-let profile = {}
-
-// personal
-profile.ownerName = 'Naufal Faisal'
-profile.ownBirthYear = 2005
-
-// Skill
 module.exports = {
-    title: `${profile.ownerName} Web Portpolio`,
-    owner: profile.ownerName,
-    ownAge: () => new Date().getFullYear() - profile.ownBirthYear
+    ownerName: 'Naufal Faisal',
+    ownerBio: 'kata\" mutiara',
+    ownerBirthYear: 2005,
+    ownerSocial: {
+        facebook:   '',
+        instagram:  '',
+        twitter:    '',
+        git:        ''
+    },
+    ownerContact: {
+        email: '',
+        telegram:   '',
+    },
+
+
+    // function
+    ownerAge: function(){
+        return new Date().getFullYear() - this.ownerBirthYear
+    },
+    webTitle: function(){
+        return `${this.ownerName} Web Portpolio`
+    }
 }

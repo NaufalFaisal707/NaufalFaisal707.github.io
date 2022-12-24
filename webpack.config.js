@@ -13,7 +13,8 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            // anime: 'animejs'
         }),
         new HtmlWebpackPlugin({
             template: './src/html/template.html',
