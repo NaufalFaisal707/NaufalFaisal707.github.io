@@ -1,13 +1,39 @@
-@import './dracula-color-palette.css';
-
 body {
     background-color: var(--background-color);
+    color: var(--foreground);
 }
 
-.nav-link:hover {
-    transition: .8;
+/* font color */
+span.font-red {
+    color: var(--red);
+}
+
+/* var */
+.rt-4 {
+    padding-top: 4rem;
+}
+
+
+/* navbar */
+.nav-link:hover, .navbar-brand:hover {
+    transition: 0.4s all;
     color: var(--pink);
 }
+
+/* banner */
+
+div.images {
+    height: 200px;
+    width: 100px;
+    background-image: url('../asset/img/Page.png');
+}
+
+/* @media screen  and (min-height: 768px){
+    .img-control {
+        width: 200px;
+    }
+} */
+
 
 /* .banner-img {
     background-image: url('../asset/img/pic3.jpg');
