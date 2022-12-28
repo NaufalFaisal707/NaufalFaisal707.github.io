@@ -1,6 +1,9 @@
 module.exports = {
-    ownerName: 'Naufal Faisal',
-    ownerBio: 'kata\" mutiara',
+    webBrandName: 'Naufal.f',
+    webBrandUrl: '#',
+    webBrandPic: require('../asset/img/Page.png'),
+    ownerName: '<span class="txt-danger">Naufal</span> Faisal',
+    ownerBio: [`Hai!, Saya [nama]`, 'sekarang saya berumur [umur] tahun, dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan editing.'],
     ownerBirthYear: 2005,
     ownerSocial: {
         facebook:   '',
@@ -12,6 +15,7 @@ module.exports = {
         email: '',
         telegram:   '',
     },
+    ownerHobbies: 'satir 👊😎',
 
 
     // function
@@ -19,6 +23,6 @@ module.exports = {
         return new Date().getFullYear() - this.ownerBirthYear
     },
     webTitle: function(){
-        return `${this.ownerName} Web Portpolio`
+        return `${this.webBrandName} Web Portpolio`
     }
 }

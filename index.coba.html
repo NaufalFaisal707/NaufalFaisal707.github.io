@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <style>
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+        /* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"); */
+        /* @import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css'; */
         @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
         @import './src/css/dracula-color-palette.css';
         @import './src/css/default.css';
+        @font-face {
+            font-family: FontAwesome;
+            src: url('./src/asset/fonts/fa-solid-900.ttf');
+        }
         @font-face {
             font-family: fredoka;
             src: url('./src/asset/fonts/Fredoka-Regular.ttf');
@@ -31,80 +38,80 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#1"><i class="bi bi-house-door-fill"></i> Beranda</a>
+                        <a class="nav-link" href="#1"><i class="fa-solid fa-house"></i> Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#2"><i class="bi bi-trophy-fill"></i> Kemampuan & Keahlian</a>
+                        <a class="nav-link" href="#2"><i class="fa-solid fa-graduation-cap"></i> Pendidikan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#3"><i class="bi bi-box-seam-fill"></i> Proyek Saya</a>
+                        <a class="nav-link" href="#3"><i class="fa-solid fa-wand-magic-sparkles"></i> Kemampuan & Keahlian</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#4"><i class="bi bi-award-fill"></i> Sertifikat</a>
+                        <a class="nav-link" href="#4"><i class="fa-solid fa-diagram-project"></i> Proyek Saya</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#5"><i class="bi bi-telephone-fill"></i> Kontak Saya</a>
+                        <a class="nav-link" href="#5"><i class="fa-solid fa-award"></i> Sertifikat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#6"><i class="fa-solid fa-headset"></i> Kontak Saya</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- body -->
-    <!-- div image -->
-    <section id="1" class="vh-100 d-flex justify-content-center align-items-center">
-        <div class="container d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly">
-            <span class="text-center text-lg-start">
-                <p class="h1">
-                    Hai!, Saya <span class="font-red">Naufal</span> Faisal
-                </p>
-                <p class="fs-6">
-                    saya sekarang berumur "umur", dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan editing.
-                </p>
-            </span>
-            <img class="col-10 col-md-8 col-lg-6" src="./src/asset/img/Page.png" alt="" srcset="">
+    <section id="1" class="">
+        <div class="container">
+            <div class="vh-100 d-flex flex-lg-row flex-column-reverse justify-content-center align-items-center">
+                <span class="text-center text-lg-start">
+                    <p class="h1">
+                        Hai!, Saya <span class="txt-danger">Naufal</span> Faisal
+                    </p>
+                    <p class="fs-6">
+                        sekarang saya berumur "umur", dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan editing.
+                    </p>
+                </span>
+                <img class="col-10 col-md-8 col-lg-6" src="./src/asset/img/Page.png" width="auto" height="auto" alt="" srcset="">
+            </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#282a36" fill-opacity="1" d="M0,288L0,192L41.1,192L41.1,32L82.3,32L82.3,224L123.4,224L123.4,192L164.6,192L164.6,96L205.7,96L205.7,128L246.9,128L246.9,288L288,288L288,160L329.1,160L329.1,288L370.3,288L370.3,192L411.4,192L411.4,160L452.6,160L452.6,192L493.7,192L493.7,96L534.9,96L534.9,224L576,224L576,224L617.1,224L617.1,128L658.3,128L658.3,96L699.4,96L699.4,64L740.6,64L740.6,192L781.7,192L781.7,256L822.9,256L822.9,64L864,64L864,192L905.1,192L905.1,256L946.3,256L946.3,96L987.4,96L987.4,192L1028.6,192L1028.6,32L1069.7,32L1069.7,160L1110.9,160L1110.9,256L1152,256L1152,224L1193.1,224L1193.1,64L1234.3,64L1234.3,256L1275.4,256L1275.4,320L1316.6,320L1316.6,224L1357.7,224L1357.7,256L1398.9,256L1398.9,256L1440,256L1440,320L1398.9,320L1398.9,320L1357.7,320L1357.7,320L1316.6,320L1316.6,320L1275.4,320L1275.4,320L1234.3,320L1234.3,320L1193.1,320L1193.1,320L1152,320L1152,320L1110.9,320L1110.9,320L1069.7,320L1069.7,320L1028.6,320L1028.6,320L987.4,320L987.4,320L946.3,320L946.3,320L905.1,320L905.1,320L864,320L864,320L822.9,320L822.9,320L781.7,320L781.7,320L740.6,320L740.6,320L699.4,320L699.4,320L658.3,320L658.3,320L617.1,320L617.1,320L576,320L576,320L534.9,320L534.9,320L493.7,320L493.7,320L452.6,320L452.6,320L411.4,320L411.4,320L370.3,320L370.3,320L329.1,320L329.1,320L288,320L288,320L246.9,320L246.9,320L205.7,320L205.7,320L164.6,320L164.6,320L123.4,320L123.4,320L82.3,320L82.3,320L41.1,320L41.1,320L0,320L0,320Z"></path></svg>
     </section>
 
     <section id="2" class="vh-100 container">
-        <div class="h-100 rt-4 bg-primary row flex-column">
-            <div class="col-auto bg-success h4 d-flex justify-content-center">
-                <i class="bi bi-trophy-fill"></i> Kemampuan & Keahlian</a>
-            </div>
-            <div class="col bg-danger">te</div>
+        <div class="h-100 rt-4 text-center h4">
+            <i class="bi bi-trophy-fill"></i> Kemampuan & Keahlian</a>
         </div>
     </section>
 
+    <section id="3" class="vh-100 container">
+        <div class="h-100 rt-4 row flex-column">
+            <div class="col-auto h4 text-center">
+                <i class="bi bi-box-seam-fill"></i> Proyek Saya</a>
+            </div>
+            <div class="col">te</div>
+        </div>
+    </section>
+    <!-- body -->
+    <!-- div image -->
 
 
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <script>
-
+    // $(document).on('scroll', function (){
+    //     console.log('yes');
+    // })
+    $(window).scroll(function(){
+        (window.pageYOffset >= 100)
+            ? $('nav').addClass('dra-secondary shadow').css('transition', '.2s')
+        : $('nav').removeClass('dra-secondary shadow')
+    })
+    // $(window).on('scroll', function () {
+    //     $.each($('section'), function(i, el){
+    //         console.log(el.offsetHeight, el.offsetTop, window.scrollY, $(el).attr('id'));
+    //     })
+    // })
 </script>
 </body>
 </html>
-
-
-
-
-
-<!-- <div class="banner-img">
-    <div class="vh-100 text-white d-flex justify-content-center align-items-center">
-        <div class="container d-flex flex-lg-row flex-column-reverse">
-            <div class="col d-flex justify-content-center align-items-center">
-                <div>
-                    <span class="h1">
-                        Hai!, Saya <span class="font-red">Naufal</span> Faisal
-                    </span>
-                    <p>
-                        acumalaka
-                    </p>
-                </div>
-            </div>
-            <div class="col d-flex">
-                <img src="./src/asset/img/Page 1.png" width="400px" alt="" srcset="">
-            </div>
-        </div>
-    </div>
-</div> -->

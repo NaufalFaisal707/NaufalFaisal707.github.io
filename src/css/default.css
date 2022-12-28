@@ -1,16 +1,41 @@
+@import './dracula-color-palette.css';
+@font-face {
+    font-family: FontAwesome;
+    src: url('../asset/fonts/fa-solid-900.ttf');
+}
+@font-face {
+    font-family: fredoka;
+    src: url('../asset/fonts/Fredoka-Regular.ttf');
+}
+* {
+    font-family: fredoka;
+}
+
 body {
     background-color: var(--background-color);
     color: var(--foreground);
 }
 
-/* font color */
-span.font-red {
-    color: var(--red);
+/* font awesome icons */
+
+.fa-solid::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }
+
+.fa-house::before {font-family: FontAwesome; font-weight: 900; content: "\f015";}
+.fa-award::before {font-family: FontAwesome; font-weight: 900; content: "\f559";}
+.fa-headset::before {font-family: FontAwesome; font-weight: 900; content: "\f590";}
+.fa-graduation-cap::before {font-family: FontAwesome; font-weight: 900; content: "\f19d";}
+.fa-diagram-project::before {font-family: FontAwesome; font-weight: 900; content: "\f542";}
+.fa-wand-magic-sparkles::before {font-family: FontAwesome; font-weight: 900; content: "\e2ca";}
 
 /* var */
 .rt-4 {
-    padding-top: 4rem;
+    padding-top: 4.8rem;
 }
 
 
@@ -22,32 +47,9 @@ span.font-red {
 
 /* banner */
 
-div.images {
-    height: 200px;
-    width: 100px;
-    background-image: url('../asset/img/Page.png');
-}
-
-/* @media screen  and (min-height: 768px){
-    .img-control {
-        width: 200px;
-    }
-} */
-
-
-/* .banner-img {
-    background-image: url('../asset/img/pic3.jpg');
-    background-position: center;
+.images {
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-} */
-
-/* .banner {
-    height: calc(100vh - 20vh);
+    background-image: url('../asset/img/pic1.jpg');
 }
-
-@media screen  and (max-height: 768px){
-    .banner {
-        height: 100vh;
-    }
-} */

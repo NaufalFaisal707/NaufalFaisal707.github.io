@@ -14,3 +14,21 @@
     --red:                  #ff5555;
     --yellow:               #f1fa8c;
 }
+
+.dra-primary {background-color: var(--purple);}
+.dra-dark {background-color: var(--background-color);}
+.dra-info {background-color: var(--cyan);}
+.dra-light {background-color: var(--foreground);}
+.dra-danger {background-color: var(--red);}
+.dra-success {background-color: var(--green);}
+.dra-warning {background-color: var(--yellow);}
+.dra-secondary {background-color: var(--current-line);}
+
+.txt-primary {color: var(--purple);}
+.txt-dark {color: var(--background-color);}
+.txt-info {color: var(--cyan);}
+.txt-light {color: var(--foreground);}
+.txt-danger {color: var(--red);}
+.txt-success {color: var(--green);}
+.txt-warning {color: var(--yellow);}
+.txt-secondary {color: var(--current-line);}
