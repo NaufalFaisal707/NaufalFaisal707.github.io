@@ -23,6 +23,10 @@
 .dra-success {background-color: var(--green);}
 .dra-warning {background-color: var(--yellow);}
 .dra-secondary {background-color: var(--current-line);}
+.dra-comment {background-color: var(--comment);}
+.dra-orange {background-color: var(--orange);}
+.dra-pink {background-color: var(--pink);}
+
 
 .txt-primary {color: var(--purple);}
 .txt-dark {color: var(--background-color);}
@@ -32,3 +36,18 @@
 .txt-success {color: var(--green);}
 .txt-warning {color: var(--yellow);}
 .txt-secondary {color: var(--current-line);}
+.txt-comment {color: var(--comment);}
+.txt-orange {color: var(--orange);}
+.txt-pink {color: var(--pink);}
+
+.border-dra-primary {border: 1.6px solid var(--purple);}
+.border-dra-dark {border: 1.6px solid var(--background-color);}
+.border-dra-info {border: 1.6px solid var(--cyan);}
+.border-dra-light {border: 1.6px solid var(--foreground);}
+.border-dra-danger {border: 1.6px solid var(--red);}
+.border-dra-success {border: 1.6px solid var(--green);}
+.border-dra-warning {border: 1.6px solid var(--yellow);}
+.border-dra-secondary {border: 1.6px solid var(--current-line);}
+.border-dra-comment {border: 1.6px solid var(--comment);}
+.border-dra-orange {border: 1.6px solid var(--orange);}
+.border-dra-pink {border: 1.6px solid var(--pink);}

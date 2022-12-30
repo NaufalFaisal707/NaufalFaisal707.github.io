@@ -26,9 +26,9 @@
     </style>
     <title>tes web</title>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
     <!-- navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <nav id="navbar-example" class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Naufal.f</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -36,31 +36,31 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav  nav-pills ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#1"><i class="fa-solid fa-house"></i> Beranda</a>
+                        <a class="nav-link" href="#one"><i class="fa-solid fa-house"></i> Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#2"><i class="fa-solid fa-graduation-cap"></i> Pendidikan</a>
+                        <a class="nav-link" href="#two"><i class="fa-solid fa-graduation-cap"></i> Pendidikan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#3"><i class="fa-solid fa-wand-magic-sparkles"></i> Kemampuan & Keahlian</a>
+                        <a class="nav-link" href="#three"><i class="fa-solid fa-wand-magic-sparkles"></i> Kemampuan & Keahlian</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#4"><i class="fa-solid fa-diagram-project"></i> Proyek Saya</a>
+                        <a class="nav-link" href="#four"><i class="fa-solid fa-diagram-project"></i> Proyek Saya</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#5"><i class="fa-solid fa-award"></i> Sertifikat</a>
+                        <a class="nav-link" href="#five"><i class="fa-solid fa-award"></i> Sertifikat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#6"><i class="fa-solid fa-headset"></i> Kontak Saya</a>
+                        <a class="nav-link" href="#six"><i class="fa-solid fa-headset"></i> Kontak Saya</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="1" class="">
+    <section id="one" class="">
         <div class="container">
             <div class="vh-100 d-flex flex-lg-row flex-column-reverse justify-content-center align-items-center">
                 <span class="text-center text-lg-start">
@@ -74,16 +74,61 @@
                 <img class="col-10 col-md-8 col-lg-6" src="./src/asset/img/Page.png" width="auto" height="auto" alt="" srcset="">
             </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#282a36" fill-opacity="1" d="M0,288L0,192L41.1,192L41.1,32L82.3,32L82.3,224L123.4,224L123.4,192L164.6,192L164.6,96L205.7,96L205.7,128L246.9,128L246.9,288L288,288L288,160L329.1,160L329.1,288L370.3,288L370.3,192L411.4,192L411.4,160L452.6,160L452.6,192L493.7,192L493.7,96L534.9,96L534.9,224L576,224L576,224L617.1,224L617.1,128L658.3,128L658.3,96L699.4,96L699.4,64L740.6,64L740.6,192L781.7,192L781.7,256L822.9,256L822.9,64L864,64L864,192L905.1,192L905.1,256L946.3,256L946.3,96L987.4,96L987.4,192L1028.6,192L1028.6,32L1069.7,32L1069.7,160L1110.9,160L1110.9,256L1152,256L1152,224L1193.1,224L1193.1,64L1234.3,64L1234.3,256L1275.4,256L1275.4,320L1316.6,320L1316.6,224L1357.7,224L1357.7,256L1398.9,256L1398.9,256L1440,256L1440,320L1398.9,320L1398.9,320L1357.7,320L1357.7,320L1316.6,320L1316.6,320L1275.4,320L1275.4,320L1234.3,320L1234.3,320L1193.1,320L1193.1,320L1152,320L1152,320L1110.9,320L1110.9,320L1069.7,320L1069.7,320L1028.6,320L1028.6,320L987.4,320L987.4,320L946.3,320L946.3,320L905.1,320L905.1,320L864,320L864,320L822.9,320L822.9,320L781.7,320L781.7,320L740.6,320L740.6,320L699.4,320L699.4,320L658.3,320L658.3,320L617.1,320L617.1,320L576,320L576,320L534.9,320L534.9,320L493.7,320L493.7,320L452.6,320L452.6,320L411.4,320L411.4,320L370.3,320L370.3,320L329.1,320L329.1,320L288,320L288,320L246.9,320L246.9,320L205.7,320L205.7,320L164.6,320L164.6,320L123.4,320L123.4,320L82.3,320L82.3,320L41.1,320L41.1,320L0,320L0,320Z"></path></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#282a36" fill-opacity="1" d="M0,288L0,192L41.1,192L41.1,32L82.3,32L82.3,224L123.4,224L123.4,192L164.6,192L164.6,96L205.7,96L205.7,128L246.9,128L246.9,288L288,288L288,160L329.1,160L329.1,288L370.3,288L370.3,192L411.4,192L411.4,160L452.6,160L452.6,192L493.7,192L493.7,96L534.9,96L534.9,224L576,224L576,224L617.1,224L617.1,128L658.3,128L658.3,96L699.4,96L699.4,64L740.6,64L740.6,192L781.7,192L781.7,256L822.9,256L822.9,64L864,64L864,192L905.1,192L905.1,256L946.3,256L946.3,96L987.4,96L987.4,192L1028.6,192L1028.6,32L1069.7,32L1069.7,160L1110.9,160L1110.9,256L1152,256L1152,224L1193.1,224L1193.1,64L1234.3,64L1234.3,256L1275.4,256L1275.4,320L1316.6,320L1316.6,224L1357.7,224L1357.7,256L1398.9,256L1398.9,256L1440,256L1440,320L1398.9,320L1398.9,320L1357.7,320L1357.7,320L1316.6,320L1316.6,320L1275.4,320L1275.4,320L1234.3,320L1234.3,320L1193.1,320L1193.1,320L1152,320L1152,320L1110.9,320L1110.9,320L1069.7,320L1069.7,320L1028.6,320L1028.6,320L987.4,320L987.4,320L946.3,320L946.3,320L905.1,320L905.1,320L864,320L864,320L822.9,320L822.9,320L781.7,320L781.7,320L740.6,320L740.6,320L699.4,320L699.4,320L658.3,320L658.3,320L617.1,320L617.1,320L576,320L576,320L534.9,320L534.9,320L493.7,320L493.7,320L452.6,320L452.6,320L411.4,320L411.4,320L370.3,320L370.3,320L329.1,320L329.1,320L288,320L288,320L246.9,320L246.9,320L205.7,320L205.7,320L164.6,320L164.6,320L123.4,320L123.4,320L82.3,320L82.3,320L41.1,320L41.1,320L0,320L0,320Z"></path></svg> -->
     </section>
 
-    <section id="2" class="vh-100 container">
-        <div class="h-100 rt-4 text-center h4">
-            <i class="bi bi-trophy-fill"></i> Kemampuan & Keahlian</a>
+    <section id="two" class="container">
+        <div class="rt-4 h4">
+            <div class="py-4 auto-position">
+                <i class="fa-solid ${val['icon']}"></i> ${val['name']}
+            </div>
+            <div class="vh-100 g-4 row row-cols-1 row-cols-md-3 justify-content-center align-content-center">
+                <div class="col">
+                    <div class="card bg-transparent border-dra-light">
+                        <div class="card-body">
+                            <h5 class="card-title txt-pink">Card title</h5>
+                            <p class="card-text fs-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-transparent border-dra-light">
+                        <div class="card-body">
+                            <h5 class="card-title txt-pink">Card title</h5>
+                            <p class="card-text fs-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-transparent border-dra-light">
+                        <div class="card-body">
+                            <h5 class="card-title txt-pink">Card title</h5>
+                            <p class="card-text fs-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-transparent border-dra-light">
+                        <div class="card-body">
+                            <h5 class="card-title txt-pink">Card title</h5>
+                            <p class="card-text fs-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-transparent border-dra-light">
+                        <div class="card-body">
+                            <h5 class="card-title txt-pink">Card title</h5>
+                            <p class="card-text fs-6">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 
-    <section id="3" class="vh-100 container">
+    <div class="col-10 col-md-8 col-lg-6"></div>
+
+    <section id="three" class="vh-100 container">
         <div class="h-100 rt-4 row flex-column">
             <div class="col-auto h4 text-center">
                 <i class="bi bi-box-seam-fill"></i> Proyek Saya</a>

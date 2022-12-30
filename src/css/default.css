@@ -35,9 +35,8 @@ body {
 
 /* var */
 .rt-4 {
-    padding-top: 4.8rem;
+    padding-top: 3.6rem;
 }
-
 
 /* navbar */
 .nav-link:hover, .navbar-brand:hover {
@@ -46,7 +45,6 @@ body {
 }
 
 /* banner */
-
 .images {
     background-repeat: no-repeat;
     background-position: center;

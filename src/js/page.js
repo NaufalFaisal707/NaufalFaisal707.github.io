@@ -18,9 +18,13 @@ $(() => {
     
     // Body structure
     const body = $('body')
+    body.attr({
+        'data-bs-spy': 'scroll',
+        'data-bs-target': '#mynav'
+    })
     // navbar
     body.html(`
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <nav id="mynav" class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Naufal.f</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,15 +38,50 @@ $(() => {
     </nav>
     `)
     $.each(navItems, function(inx, val){
-        $('nav ul.navbar-nav').append(`<li class="nav-item"><a class="nav-link" href="#${inx}"><i class="fa-solid ${val['icon']}"></i> ${val['name']}</a></li>`)
+        $('nav ul.navbar-nav').append(`<li class="nav-item"><a class="nav-link" href="#page${inx}"><i class="fa-solid ${val['icon']}"></i> ${val['name']}</a></li>`)
     })
     
     // body
     $.each(navItems, function(inx, val){
-        body.append(`<section id="${inx}"/>`)
+        body.append(`<section id="page${inx}"/>`)
+        inx === 0
+            ? $(`section#page${inx}`).addClass('container')
+            .html(`
+                <div class="vh-100 d-flex flex-lg-row flex-column-reverse justify-content-center align-items-center">
+                    <span class="text-center text-lg-start">
+                        <p class="h1">
+                        ${web.ownerBio[0].split('[nama]').join(web.ownerName)}
+                        </p>
+                        <p class="fs-6">
+                            ${web.ownerBio[1].split('[umur]').join(web.ownerAge())}
+                        </p>
+                    </span>
+                    <img class="col-10 col-sm-6 col-md-6 col-lg-6" src="${web.webBrandPic}" width="auto" height="auto" alt="" srcset="">
+                </div>
+            `)
+                
+        : $(`section#page${inx}`).addClass('container')
+        // <div class="py-4">
+        //     <i class="fa-solid ${val['icon']}"></i> ${val['name']}
+        // </div>
+        .html(`
+        <div class="vh-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="">
+                judul
+            </div>
+            <div class="">
+                konten
+            </div>
+        </div>
+        `)
     })
-    
-    
+
+    // page script
+    $(window).scroll(function(){
+        (window.pageYOffset >= 100)
+            ? $('nav').addClass('dra-secondary shadow').css('transition', '.2s')
+        : $('nav').removeClass('dra-secondary shadow')
+    })
     
     
     // inx === 0
