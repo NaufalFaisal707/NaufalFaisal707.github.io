@@ -1,0 +1,92 @@
+/*!***********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/default.css ***!
+  \***********************************************************************/
+@font-face {
+    font-family: FontAwesome;
+    src: url(../../src/fonts/fa-solid-900-b1a653db79258eeccc5d.ttf);
+}
+@font-face {
+    font-family: bsIcons;
+    src: url(../../src/fonts/bootstrap-icons-6959d0d983ee318f8880.woff);
+}
+/* @font-face {
+    font-family: fredoka;
+    src: url('../asset/fonts/Fredoka-Regular.ttf');
+}
+* {
+    font-family: fredoka;
+} */
+
+/* bootstrap icons */
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bsIcons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-github::before { content: "\f3ed"; }
+.bi-twitter::before { content: "\f5ef"; }
+.bi-facebook::before { content: "\f344"; }
+.bi-instagram::before { content: "\f437"; }
+
+/* font awesome icons */
+
+.fa-solid::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa-house::before {font-family: FontAwesome; font-weight: 900; content: "\f015";}
+.fa-award::before {font-family: FontAwesome; font-weight: 900; content: "\f559";}
+.fa-headset::before {font-family: FontAwesome; font-weight: 900; content: "\f590";}
+.fa-graduation-cap::before {font-family: FontAwesome; font-weight: 900; content: "\f19d";}
+.fa-diagram-project::before {font-family: FontAwesome; font-weight: 900; content: "\f542";}
+.fa-wand-magic-sparkles::before {font-family: FontAwesome; font-weight: 900; content: "\e2ca";}
+
+/* var */
+.auto-pad {
+    padding-top: 0;
+}
+@media (max-width: 768px), (max-height: 600px) {
+    .auto-pad {
+        padding-top: 3.8rem;
+    }
+}
+/* navbar */
+.nav-link:hover, .navbar-brand:hover {
+    transition: 0.4s all;
+    color: var(--pink);
+}
+
+.url:hover {
+    transition: 0.4s all;
+    color: var(--pink);
+}
+
+/* banner */
+/* .images {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../asset/img/pic1.jpg');
+} */
+
+.school-image {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
