@@ -63,10 +63,24 @@
         padding-top: 3.8rem;
     }
 }
-/* navbar */
-.nav-link:hover, .navbar-brand:hover {
-    transition: 0.4s all;
-    color: var(--pink);
+
+.active {
+    border-bottom: 2px solid;
+    /* border-image: linear-gradient(135deg,var(--pink) #ff80bf) 10; */
+}
+
+.clip {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand-clip {
+    transition: .5s;
+    -webkit-background-clip: text;
+}
+.brand-clip:hover {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .url:hover {
@@ -82,9 +96,3 @@
     background-image: url('../asset/img/pic1.jpg');
 } */
 
-.school-image {
-    height: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}

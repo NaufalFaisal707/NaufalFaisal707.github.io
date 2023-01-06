@@ -1,8 +1,7 @@
 module.exports = {
     webBrandName: 'Naufal.f',
-    webBrandUrl: '#',
     webBrandPic: require('../asset/img/Page.png'),
-    ownerName: '<span class="drac-text-red">Naufal</span> Faisal',
+    ownerName: '<span class="drac-text-red drac-bg-animated clip">Naufal</span> Faisal',
     ownerBio: [`Hai!, Saya [nama]`, 'sekarang saya berumur [umur] tahun, dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan editing.'],
     ownerBirthYear: 2005,
     ownerSocial: [
@@ -20,17 +19,14 @@ module.exports = {
             {
                 year: '2010 - 2016',
                 school: 'SDS Binamuslimin',
-                picURL: `background-image: url('${require('../asset/img/pic0.jpg')}')`
             },
             {
                 year: '2017 - 2019',
                 school: 'SMP KP Ciparay',
-                picURL: `background-image: url('${require('../asset/img/pic2.jpg')}')`
             },
             {
                 year: '2020 - 2023',
                 school: 'SMK 2 LPPM-RI Majalaya',
-                picURL: `background-image: url('${require('../asset/img/pic1.jpg')}')`
             },
         ],
         skill: {
