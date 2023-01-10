@@ -1,6 +1,5 @@
 module.exports = {
     webBrandName: 'Naufal.f',
-    webBrandPic: require('../asset/img/Page.png'),
     ownerName: '<span class="drac-text-red drac-bg-animated clip">Naufal</span> Faisal',
     ownerBio: [`Hai!, Saya [nama]`, 'sekarang saya berumur [umur] tahun, dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan editing.'],
     ownerBirthYear: 2005,
@@ -29,9 +28,68 @@ module.exports = {
                 school: 'SMK 2 LPPM-RI Majalaya',
             },
         ],
-        skill: {
-            
-        }
+        skill: [
+            {
+                'name': 'Multimedia',
+                'list': [
+                    {
+                        'name': 'After Effect',
+                        'experience': '70%',
+                        'expertise': '68%'
+                    },
+                    {
+                        'name': 'Premiere Pro',
+                        'experience': '28%',
+                        'expertise': '20%'
+                    },
+                    {
+                        'name': 'Photoshop',
+                        'experience': '42%',
+                        'expertise': '52%'
+                    },
+                    {
+                        'name': 'Audation',
+                        'experience': '35%',
+                        'expertise': '28%'
+                    },
+                    {
+                        'name': 'Inkscape',
+                        'experience': '47%',
+                        'expertise': '58%'
+                    },
+                ]
+            },
+            {
+                'name': 'Pemograman',
+                'list': [
+                    {
+                        'name': 'HTML',
+                        'experience': '52%',
+                        'expertise': '73%'
+                    },
+                    {
+                        'name': 'CSS',
+                        'experience': '40%',
+                        'expertise': '69%'
+                    },
+                    {
+                        'name': 'Javascript',
+                        'experience': '73%',
+                        'expertise': '64%'
+                    },
+                ]
+            },
+            {
+                'name': 'Fotografi',
+                'list': [
+                    {
+                        'name': '-',
+                        'experience': '-',
+                        'expertise': '-'
+                    },
+                ]
+            },
+        ]
     },
 
 

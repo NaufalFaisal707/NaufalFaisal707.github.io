@@ -9,15 +9,14 @@ $(() => {
     // navbar indicator
     const navItems = [
         {
-            'name':'beranda',
+            'title':'beranda',
+            'color': 'drac-text-purple-cyan',
             'icon': {
-                'name': '<i class="fa-solid fa-house drac-text-purple-cyan"></i>',
+                'name': (color) => `<i class="fa-solid fa-house ${color}"></i>`,
                 'border-color': 'border-image: linear-gradient(135deg,var(--purple), var(--cyan)) 10;'
             },
-            'structure': {
-                'class': 'vh-100 d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center',
-                'element': function(){
-                    return`
+            'structure': function(icon, border, title, color){return`
+                <div class="vh-100 d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center">
                     <div class="text-center text-lg-start">
                         <p class="h1 fw-bold">${web.ownerBio[0].split('[nama]').join(web.ownerName)}</p>
                         <p class="fs-6">${web.ownerBio[1].split('[umur]').join(web.ownerAge())}</p>
@@ -25,108 +24,127 @@ $(() => {
                             ${web.ownerSocial.map(val => `<a href="${val.url}" aria-label="link media sosial" target="_blank" class="url drac-text-white">${val.icon}</a>`).join('')}
                         </div>                
                     </div>
-                    <img class="col-10 col-sm-6 col-md-6 col-lg-6" src="${web.webBrandPic}" alt="" srcset="">
-                    `
-                },
-            }
+                    <img class="col-10 col-sm-6 col-md-6 col-lg-6" src="${require('../asset/img/Page.png')}" alt="" srcset="">
+                </div>
+            `}
         },
         {
-            'name':'Pendidikan',
+            'title':'Pendidikan',
+            'color': 'drac-text-pink-purple',
             'icon': {
-                'name': '<i class="fa-solid fa-graduation-cap drac-text-pink-purple"></i>',
+                'name': (color) => `<i class="fa-solid fa-graduation-cap ${color}"></i>`,
                 'border-color': 'border-image: linear-gradient(135deg,var(--pink), var(--purple)) 10;'
             },
-            'structure': {
-                'class': 'vh-100 d-flex flex-column justify-content-md-evenly align-items-center auto-pad',
-                'element': function(name, icon){
-                    return`
-                    <div class="h4 py-4 py-md-0">
-                        ${icon} ${name}
+            'structure': function(icon, border, title, color){return`
+                <div class="tg-vh vh-100" style="padding-top: 3.8rem">
+                    <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
+                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="d-flex flex-wrap flex-md-row flex-column gap-4 justify-content-between">
+                        ${
+                            web.person.education.map(val => `
+                                <div class="border-left ps-4 py-2 pe-4" style="${border}">
+                                    <div class="card-body">
+                                        <h4 class="card-title ${color}">${val.year}</h4>
+                                        <p class="card-text fs-5">${val.school}</p>
+                                    </div>
+                                </div>`)
+                            .join('')
+                        }
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-center flex-wrap gap-5">
-                    ${
-                        web.person.education.map(val => `
-                        <div variant="subtle" class="drac-box drac-card drac-card-subtle drac-border-white drac-bg-white drac-p-md">
-                                <div class="card-img-top school-image rounded" style="${val.picURL}"></div>
-                                <div class="card-body">
-                                    <h4 class="card-title drac-text-pink-purple">${val.year}</h4>
-                                    <p class="card-text fs-5">${val.school}</p>
-                                </div>
-                            </div>
-                        `).join('')
-                    }
-                    </div>`
-                }
-                ,
-            }
+                </div>
+            `}
         },
         {
-            'name':'Kemampuan & Keahlian',
+            'title':'Pengalaman & Keahlian',
+            'color': 'drac-text-yellow-pink',
             'icon': {
-                'name': '<i class="fa-solid fa-wand-magic-sparkles drac-text-yellow-pink"></i>',
+                'name': (color) => `<i class="fa-solid fa-wand-magic-sparkles ${color}"></i>`,
                 'border-color': 'border-image: linear-gradient(135deg,var(--yellow), var(--pink)) 10;'
             },
-            'structure': {
-                'class': 'vh-100 d-flex flex-column justify-content-md-evenly align-items-center auto-pad',
-                'element': function(name, icon){
-                    return`
-                    <div class="h4 py-4 py-md-0">
-                        ${icon} ${name}
+            'structure': function(icon, border, title, color){return`
+                <div class="tg-vh vh-100" style="padding-top: 3.8rem">
+                    <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
+                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="row flex-wrap gap-4">
+                            ${
+                                web.person.skill.map(val => `
+                                    <div class="col">
+                                        <div class="border-left ps-4 py-2 pe-4" style="${border}">
+                                            <div class="card-body">
+                                                <h4 class="card-title ${color}">${val['name']}</h4>
+                                                ${
+                                                    val['list'].map((list) => `
+                                                        <div class="py-2">
+                                                            <div class="fw-bold py-1">${list['name']}</div>
+                                                            <li style="font-size: 12px">Keahlian: ${list['expertise']}</li>
+                                                            <li style="font-size: 12px">Pengalaman: ${list['experience']}</li>
+                                                        </div>`)
+                                                    .join('')
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>`)
+                                .join('')
+                            }
+                        </div>
                     </div>
-                    `
-                },
-            }
+                </div>
+            `}
         },
         {
-            'name':'Proyek Saya',
+            'title':'Proyek Saya',
+            'color': 'drac-text-cyan-green',
             'icon': {
-                'name': '<i class="fa-solid fa-diagram-project drac-text-cyan-green"></i>',
+                'name': (color) => `<i class="fa-solid fa-diagram-project ${color}"></i>`,
                 'border-color': 'border-image: linear-gradient(135deg,var(--cyan), var(--green)) 10;'
             },
-            'structure': {
-                'class': 'vh-100 d-flex flex-column justify-content-md-evenly align-items-center auto-pad',
-                'element': function(name, icon){
-                    return`
-                    <div class="h4 py-4 py-md-0">
-                        ${icon} ${name}
+            'structure': function(icon, border, title, color){return`
+                <div class="tg-vh vh-100" style="padding-top: 3.8rem">
+                    <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
+                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="d-flex flex-wrap flex-md-row flex-column gap-3 justify-content-between">
+                            <div class="drac-bg-black-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
+                        </div>
                     </div>
-                    `
-                },
-            }
+                </div>
+            `}
         },
         {
-            'name':'Sertifikat',
+            'title':'Sertifikat',
+            'color': 'drac-text-yellow-pink',
             'icon': {
-                'name': '<i class="fa-solid fa-award drac-text-yellow-pink"></i>',
+                'name': (color) => `<i class="fa-solid fa-award ${color}"></i>`,
                 'border-color': 'border-image: linear-gradient(135deg,var(--yellow), var(--pink)) 10;'
             },
-            'structure': {
-                'class': 'vh-100 d-flex flex-column justify-content-md-evenly align-items-center auto-pad',
-                'element': function(name, icon){
-                    return`
-                    <div class="h4 py-4 py-md-0">
-                        ${icon} ${name}
+            'structure': function(icon, border, title, color){return`
+                <div class="tg-vh vh-100" style="padding-top: 3.8rem">
+                    <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
+                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="d-flex flex-wrap flex-md-row flex-column gap-3 justify-content-between">
+                            <div class="drac-bg-black-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
+                        </div>
                     </div>
-                    `
-                },
-            }
+                </div>
+            `}
         },
         {
-            'name':'Kontak Saya',
+            'title':'Kontak Saya',
+            'color': 'drac-text-purple-cyan',
             'icon': {
-                'name': '<i class="fa-solid fa-headset drac-text-purple-cyan"></i>',
+                'name': (color) => `<i class="fa-solid fa-headset ${color}"></i>`,
                 'border-color': 'border-image: linear-gradient(135deg,var(--purple), var(--cyan)) 10;'
             },
-            'structure': {
-                'class': 'vh-100 d-flex flex-column justify-content-md-evenly align-items-center auto-pad',
-                'element': function(name, icon){
-                    return`
-                    <div class="h4 py-4 py-md-0">
-                        ${icon} ${name}
+            'structure': function(icon, border, title, color){return`
+                <div class="tg-vh vh-100" style="padding-top: 3.8rem">
+                    <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
+                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="d-flex flex-wrap flex-md-row flex-column gap-3 justify-content-between">
+                            <div class="drac-bg-black-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
+                        </div>
                     </div>
-                    `
-                },
-            }
+                </div>
+            `}
         },
     ]
     
@@ -136,7 +154,7 @@ $(() => {
         'data-bs-spy': 'scroll',
         'data-bs-target': '#mynav',
     
-    }).addClass('user-select-none')
+    }).addClass('user-select-none drac-bg-black drac-text-white drac-text')
 
     // navbar
     body.html(`
@@ -149,8 +167,12 @@ $(() => {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     ${
-                        navItems.map((val, inx) => {
-                            return `<li class="nav-item"><a class="nav-link" style="${val['icon']['border-color']}" href="#page${inx}">${val['icon']['name']} ${val['name']}</a></li>`
+                        navItems.map((val, inx) => {return`
+                            <li class="nav-item">
+                                <a class="nav-link" style="${val['icon']['border-color']}" href="#page${inx}">
+                                    ${val['icon']['name'](val['color'])} ${val['title']}
+                                </a>
+                            </li>`
                         }).join('')
                     }
                 </ul>
@@ -161,13 +183,32 @@ $(() => {
     
     // body
     $.each(navItems, function(inx, val){
-        body.append(`<section class="container" id="page${inx}"><div class="${val['structure']['class']}">${val['structure']['element'](val['name'], val['icon']['name'])}</div></section>`)
+        body.append(`
+            <section class="container" id="page${inx}">
+                ${
+                    val['structure'](val['icon']['name'](val['color']), val['icon']['border-color'], val['title'], val['color'])
+                }
+            </section>
+            `)
+            // ${val['structure']['element'](val['name'], val['icon']['name'], val['icon']['border-color'])}
+            // body.append(
+            // `<section class="container" id="page${inx}">
+                // <div class="tg-vh vh-100" style="padding-top: 3.8rem">
+                //     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
+                //         <div class="h4 py-4 py-lg-0">judul</div>
+                //         <div class="d-flex flex-wrap gap-3 justify-content-center">
+                //             <div classdrac-bg-bg-blackrple-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
+                //         </div>
+                //     </div>
+                // </div>
+            // </section>`
+            // )
     })
 })
 
 // page script
 $(window).scroll(function(){
-    (window.pageYOffset >= 100)
+    window.pageYOffset >= 100
         ? $('nav').addClass('shadow').css({
             'transition': '.2s',
             'background-color': 'var(--blackSecondary)'
@@ -175,58 +216,7 @@ $(window).scroll(function(){
     : $('nav').removeClass('shadow').css('background-color', 'transparent')
 })
 
-// body.append(`<section id="page${inx}"/>`)
-// inx === 0
-//     ? $(`section#page${inx}`).addClass('container')
-//     .html(`
-//     <div class="vh-100 d-flex flex-column-reverse flex-lg-row justify-content-center align-items-center">
-//         <div class="text-center text-lg-start">
-//             <p class="h1">
-//                 ${web.ownerBio[0].split('[nama]').join(web.ownerName)}
-//             </p>
-//             <p class="fs-6">
-//                 ${web.ownerBio[1].split('[umur]').join(web.ownerAge())}
-//             </p>
-//             <div class="fs-4 d-flex justify-content-center justify-content-lg-start gap-5 pt-2">
-//                 ${
-//                     web.ownerSocial.map(val => {
-//                         return `
-//                             <a href="${val.url}" aria-label="link media sosial" target="_blank" class="url drac-text-white">${val.icon}</a>
-//                             `
-//                     }).join('')
-//                 }
-//             </div>                
-//         </div>
-//         <img class="col-10 col-sm-6 col-md-6 col-lg-6" src="${web.webBrandPic}" width="auto" height="auto" alt="" srcset="">
-//     </div>
-//     `)
-        
-// : $(`section#page${inx}`).addClass('container')
-// .html(`
-// <div class="min-vh-100 d-flex flex-column justify-content-md-evenly align-items-center auto-pad">
-//     <div class="h4 py-4 py-md-0">
-//         ${val['icon']} ${val['name']}
-//     </div>
-//     <div class="d-flex justify-content-center flex-wrap gap-5">
-//     ${
-//         inx === 1
-//         ? web.person.education.map(val => {
-//             return `
-            // <div variant="subtle" class="drac-box drac-card drac-card-subtle drac-border-white drac-bg-white drac-p-md">
-            //     <div class="card-img-top school-image rounded" style="${val.picURL}"></div>
-            //     <div class="card-body pt-4">
-            //         <h4 class="card-title drac-text-pink">${val.year}</h4>
-            //         <p class="card-text fs-5">${val.school}</p>
-            //     </div>
-            // </div>
-//             `
-//         }).join('')
-//     : inx === 1
-//         ? `<div>jancok pristel</div>`
-//     : ``
-//     }
-//     </div>
-// </div>
-// `)
-// })
-
+$(window).ready(() => {
+    window.innerWidth <= 768 ? $('section div.tg-vh').removeClass('vh-100') : $('section div.tg-vh').addClass('vh-100')
+    $(window).resize(() => window.innerWidth <= 768 ? $('section div.tg-vh').removeClass('vh-100') : $('section div.tg-vh').addClass('vh-100'))
+})

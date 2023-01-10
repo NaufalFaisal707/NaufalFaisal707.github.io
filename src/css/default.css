@@ -55,18 +55,16 @@
 .fa-wand-magic-sparkles::before {font-family: FontAwesome; font-weight: 900; content: "\e2ca";}
 
 /* var */
-.auto-pad {
-    padding-top: 0;
-}
-@media (max-width: 768px), (max-height: 600px) {
-    .auto-pad {
-        padding-top: 3.8rem;
-    }
-}
-
 .active {
     border-bottom: 2px solid;
-    /* border-image: linear-gradient(135deg,var(--pink) #ff80bf) 10; */
+}
+
+/* border */
+.border-left {
+    border-left: 2px solid;
+}
+.border {
+    border: 2px solid;
 }
 
 .clip {
@@ -87,12 +85,4 @@
     transition: 0.4s all;
     color: var(--pink);
 }
-
-/* banner */
-/* .images {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('../asset/img/pic1.jpg');
-} */
 
