@@ -7,13 +7,6 @@
     font-family: bsIcons;
     src: url('../asset/fonts/bootstrap-icons.woff');
 }
-/* @font-face {
-    font-family: fredoka;
-    src: url('../asset/fonts/Fredoka-Regular.ttf');
-}
-* {
-    font-family: fredoka;
-} */
 
 /* bootstrap icons */
 
@@ -63,20 +56,24 @@
 .border-left {
     border-left: 2px solid;
 }
-.border {
+.border-fill {
     border: 2px solid;
+    border-radius: 4px;
 }
 
 .clip {
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .brand-clip {
     transition: .5s;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 .brand-clip:hover {
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -85,4 +82,3 @@
     transition: 0.4s all;
     color: var(--pink);
 }
-

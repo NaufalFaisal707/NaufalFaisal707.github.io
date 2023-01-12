@@ -1,6 +1,3 @@
-/*!***********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/default.css ***!
-  \***********************************************************************/
 @font-face {
     font-family: FontAwesome;
     src: url(../../src/fonts/fa-solid-900-b1a653db79258eeccc5d.ttf);
@@ -9,13 +6,6 @@
     font-family: bsIcons;
     src: url(../../src/fonts/bootstrap-icons-6959d0d983ee318f8880.woff);
 }
-/* @font-face {
-    font-family: fredoka;
-    src: url('../asset/fonts/Fredoka-Regular.ttf');
-}
-* {
-    font-family: fredoka;
-} */
 
 /* bootstrap icons */
 
@@ -57,38 +47,32 @@
 .fa-wand-magic-sparkles::before {font-family: FontAwesome; font-weight: 900; content: "\e2ca";}
 
 /* var */
-.auto-pad {
-    padding-top: 0;
-}
-@media (max-width: 768px), (max-height: 600px) {
-    .auto-pad {
-        padding-top: 3.8rem;
-    }
-}
-
 .active {
     border-bottom: 2px solid;
-    /* border-image: linear-gradient(135deg,var(--pink) #ff80bf) 10; */
 }
 
 /* border */
 .border-left {
     border-left: 2px solid;
 }
-.border {
+.border-fill {
     border: 2px solid;
+    border-radius: 4px;
 }
 
 .clip {
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .brand-clip {
     transition: .5s;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 .brand-clip:hover {
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -97,5 +81,4 @@
     transition: 0.4s all;
     color: var(--pink);
 }
-
 

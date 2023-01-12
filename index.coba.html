@@ -100,6 +100,29 @@
           </ol>
     </section>
 
+    <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+        ${
+            web.person.skill.map(val => `
+                <div class="border-left ps-4 py-2 pe-4" style="${border}">
+                    <div class="card-body">
+                        <h4 class="card-title ${color}">${val['name']}</h4>
+                        ${
+                            val['list'].map((list) => `
+                                <div class="py-2">
+                                    <div class="fw-bold py-1">${list['name']}</div>
+                                    <li class="fs-6">Keahlian: ${list['expertise']}</li>
+                                    <li class="fs-6">Pengalaman: ${list['experience']}</li>
+                                </div>`)
+                            .join('')
+                        }
+                    </div>
+                </div>`)
+            .join('')
+        }
+        </div> -->
+
+    <!-- <div class="d-flex flex-wrap flex-md-row flex-column gap-4 justify-content-between"> -->
+
     <div class="col-10 col-md-8 col-lg-6"></div>
 
     <section id="three" class="vh-100 container">

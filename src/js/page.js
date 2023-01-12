@@ -20,7 +20,7 @@ $(() => {
                     <div class="text-center text-lg-start">
                         <p class="h1 fw-bold">${web.ownerBio[0].split('[nama]').join(web.ownerName)}</p>
                         <p class="fs-6">${web.ownerBio[1].split('[umur]').join(web.ownerAge())}</p>
-                        <div class="fs-4 d-flex justify-content-center justify-content-lg-start gap-5 pt-2">
+                        <div class="fs-4 d-flex justify-content-center align-items-center justify-content-lg-start gap-5 pt-2">
                             ${web.ownerSocial.map(val => `<a href="${val.url}" aria-label="link media sosial" target="_blank" class="url drac-text-white">${val.icon}</a>`).join('')}
                         </div>                
                     </div>
@@ -38,7 +38,7 @@ $(() => {
             'structure': function(icon, border, title, color){return`
                 <div class="tg-vh vh-100" style="padding-top: 3.8rem">
                     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
-                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="add-pad h4">${icon} ${title}</div>
                         <div class="d-flex flex-wrap flex-md-row flex-column gap-4 justify-content-between">
                         ${
                             web.person.education.map(val => `
@@ -65,20 +65,22 @@ $(() => {
             'structure': function(icon, border, title, color){return`
                 <div class="tg-vh vh-100" style="padding-top: 3.8rem">
                     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
-                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
-                        <div class="row flex-wrap gap-4">
+                        <div class="add-pad h4">${icon} ${title}</div>
+                        <div class="row row-cols-0 row-cols-md-2 row-cols-lg-auto g-4">
                             ${
                                 web.person.skill.map(val => `
                                     <div class="col">
                                         <div class="border-left ps-4 py-2 pe-4" style="${border}">
                                             <div class="card-body">
-                                                <h4 class="card-title ${color}">${val['name']}</h4>
+                                                <h4 class="card-title ${color} pb-2">${val['name']}</h4>
                                                 ${
                                                     val['list'].map((list) => `
-                                                        <div class="py-2">
+                                                        <div>
                                                             <div class="fw-bold py-1">${list['name']}</div>
-                                                            <li style="font-size: 12px">Keahlian: ${list['expertise']}</li>
-                                                            <li style="font-size: 12px">Pengalaman: ${list['experience']}</li>
+                                                            <ul>
+                                                                <li style="font-size: 12px">Keahlian: ${list['expertise']}</li>
+                                                                <li style="font-size: 12px">Pengalaman: ${list['experience']}</li>
+                                                            </ul>
                                                         </div>`)
                                                     .join('')
                                                 }
@@ -102,9 +104,17 @@ $(() => {
             'structure': function(icon, border, title, color){return`
                 <div class="tg-vh vh-100" style="padding-top: 3.8rem">
                     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
-                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
-                        <div class="d-flex flex-wrap flex-md-row flex-column gap-3 justify-content-between">
-                            <div class="drac-bg-black-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
+                        <div class="add-pad h4">${icon} ${title}</div>
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                        ${
+                            web.person.project.map(val => `
+                                <div class="col">
+                                    <div class="drac-box drac-card drac-card-subtle drac-border-cyan drac-bg-pink p-3">
+                                        <img src="${val}" onLoad="checkDocument()" class="img-fluid" alt="..." loading="lazy">
+                                    </div>
+                                </div>`)
+                            .join('')
+                        }
                         </div>
                     </div>
                 </div>
@@ -120,7 +130,7 @@ $(() => {
             'structure': function(icon, border, title, color){return`
                 <div class="tg-vh vh-100" style="padding-top: 3.8rem">
                     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
-                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="add-pad h4">${icon} ${title}</div>
                         <div class="d-flex flex-wrap flex-md-row flex-column gap-3 justify-content-between">
                             <div class="drac-bg-black-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
                         </div>
@@ -138,7 +148,7 @@ $(() => {
             'structure': function(icon, border, title, color){return`
                 <div class="tg-vh vh-100" style="padding-top: 3.8rem">
                     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
-                        <div class="h4 py-4 py-lg-0">${icon} ${title}</div>
+                        <div class="add-pad h4">${icon} ${title}</div>
                         <div class="d-flex flex-wrap flex-md-row flex-column gap-3 justify-content-between">
                             <div class="drac-bg-black-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
                         </div>
@@ -183,26 +193,7 @@ $(() => {
     
     // body
     $.each(navItems, function(inx, val){
-        body.append(`
-            <section class="container" id="page${inx}">
-                ${
-                    val['structure'](val['icon']['name'](val['color']), val['icon']['border-color'], val['title'], val['color'])
-                }
-            </section>
-            `)
-            // ${val['structure']['element'](val['name'], val['icon']['name'], val['icon']['border-color'])}
-            // body.append(
-            // `<section class="container" id="page${inx}">
-                // <div class="tg-vh vh-100" style="padding-top: 3.8rem">
-                //     <div class="h-100 d-flex flex-column justify-content-evenly align-items-center">
-                //         <div class="h4 py-4 py-lg-0">judul</div>
-                //         <div class="d-flex flex-wrap gap-3 justify-content-center">
-                //             <div classdrac-bg-bg-blackrple-secondary drac-rounded-lg py-2 px-4">Konten belum tersedia</div>
-                //         </div>
-                //     </div>
-                // </div>
-            // </section>`
-            // )
+        body.append(`<section class="container" id="page${inx}">${val['structure'](val['icon']['name'](val['color']), val['icon']['border-color'], val['title'], val['color'])}</section>`)
     })
 })
 
@@ -214,9 +205,4 @@ $(window).scroll(function(){
             'background-color': 'var(--blackSecondary)'
         })
     : $('nav').removeClass('shadow').css('background-color', 'transparent')
-})
-
-$(window).ready(() => {
-    window.innerWidth <= 768 ? $('section div.tg-vh').removeClass('vh-100') : $('section div.tg-vh').addClass('vh-100')
-    $(window).resize(() => window.innerWidth <= 768 ? $('section div.tg-vh').removeClass('vh-100') : $('section div.tg-vh').addClass('vh-100'))
 })
