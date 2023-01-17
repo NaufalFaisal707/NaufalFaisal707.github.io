@@ -48,6 +48,11 @@ module.exports = {
                         'expertise': '62%'
                     },
                     {
+                        'name': 'Lightroom Classic',
+                        'experience': '28%',
+                        'expertise': '40%'
+                    },
+                    {
                         'name': 'Audation',
                         'experience': '35%',
                         'expertise': '28%'
