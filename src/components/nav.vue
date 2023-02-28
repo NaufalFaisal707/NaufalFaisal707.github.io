@@ -1,22 +1,27 @@
 <script setup>
 defineProps({
-    navigasi: Number,
+    navigasi: Array,
 })
 </script>
 
 <template>
     <nav id="navbar" :class="[scroll ? 'bg-dra-curent-line shadow-sm' : '']" class="transition ease-in delay-50 fixed w-[100%]">
-        <div class="container flex justify-between items-center h-14">
-            <text class="text-xl">Naufal.f</text>
-            <!-- <button @focusin="menuActive = true" @focusout="menuActive = false">{{ menuActive }}</button> -->
-            <button @click="menuActive = menuActive ? false : true" class="transition ease-in delay-50 md:hidden inline-block p-1 border-gray-400 text-gray-400 hover:text-dra-foreground">
-                <XMarkIcon :class="[menuActive ? '' : 'hidden']" class="h-8 w-8" />
-                <Bars3Icon :class="[menuActive ? 'hidden' : '']" class="h-8 w-8" />
+        <div class="container items-center justify-between flex h-14">
+            <text class="text-xl pr-4">Naufal.f</text>
+            <button @click="menuActive = !menuActive " class="transition ease-in delay-50 md:hidden inline-block p-1 border-gray-400 text-gray-400 hover:text-dra-foreground">
+                <Bars3Icon v-if="menuActive" class="h-8 w-8" />
+                <XMarkIcon v-else class="h-8 w-8" />
             </button>
-            <ul class="flex hidden md:inline-block">
-                <li><a href="#">{{ scroll }}</a></li>
-                <li><a href="#">{{ navigasi }}</a></li>
-            </ul>
+            <div class="hidden md:inline-block">
+                <ul class="flex">
+                    <li><a ref="asik" class="p-2" href="#">{{ scroll }}</a></li>
+                    <li><a class="p-2" href="#">{{ scroll }}</a></li>
+                    <li><a class="p-2" href="#">{{ scroll }}</a></li>
+                    <li><a class="p-2" href="#">{{ scroll }}</a></li>
+                    <li><a class="p-2" href="#">{{ scroll }}</a></li>
+                    <li><a class="p-2" href="#">{{ scroll }}</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 </template>
@@ -38,9 +43,8 @@ export default {
     },
     methods: {
         handleScroll(){
-            window.pageYOffset >= 100
-            ? this.scroll = true
-            : this.scroll = false
+            window.pageYOffset >= 100 ? this.scroll = true : this.scroll = false
+            // console.log(this.$refs);
         }
     }
 }

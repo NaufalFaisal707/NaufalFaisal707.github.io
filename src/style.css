@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 body {
-    @apply dark:bg-dra-background dark:text-dra-foreground
-    bg-white text-black
+    @apply bg-dra-background text-dra-foreground
 }
 
 .container {
     @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8
+}
+
+.icon-xl {
+    @apply h-8 w-8
+}
+.icon-sm {
+    @apply h-6 w-6
 }
