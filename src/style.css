@@ -14,6 +14,11 @@ body {
     @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 min-h-screen
 }
 
+.color {
+    fill: "currentColor";
+    color: #50fa7b;
+}
+
 /* 
     Bagian ini dari https://ui.draculatheme.com/colors
 */
@@ -37,3 +42,41 @@ body {
         background-position: 0 50%
     }
 }
+
+/*!
+ * Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2022 Fonticons, Inc.
+ */
+
+@font-face {
+    font-family: 'FontAwesomeBrand';
+    src: url("./font/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'FontAwesomeSolid';
+    src: url("./font/fa-solid-900.woff2") format("woff2");
+}
+
+.fa-solid::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Nav icon */
+.fa-house::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f015";}
+.fa-award::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f559";}
+.fa-headset::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f590";}
+.fa-graduation-cap::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f19d";}
+.fa-diagram-project::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f542";}
+.fa-wand-magic-sparkles::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\e2ca";}
+
+/* social icon */
+.fa-github::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f09b";}
+.fa-twitter::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f099";}
+.fa-facebook::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f09a";}
+.fa-instagram::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f16d";}

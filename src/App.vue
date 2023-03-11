@@ -3,17 +3,25 @@
         <div class="grid gap-2">
             <text class="lg:text-4xl sm:text-3xl text-2xl md:text-start text-center font-bold">Hai, Saya <span class="bg-clip-text transition-all ease-in-out duration-150 cursor-help hover:text-transparent dra-rainbow">{{ profil.namaPembuat }}</span></text>
             <p class="lg:text-base sm:text-[15px] text-[12px] md:text-start text-center capitalize">sekarang saya berumur {{ ulangTahun() }} tahun, dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan multimedia.</p>
-            <ul class="lg:text-base sm:text-[15px] text-[10px] pt-2 flex md:justify-start justify-center items-center gap-6">
-                <a href="#"><button class="py-2 px-4 border-2 ease-in-out duration-150 hover:border-transparent hover:bg-dra-purple rounded-md">Kontak saya</button></a>
-                <li><a href="#">logo</a></li>
-                <li><a href="#">logo</a></li>
-                <li><a href="#">logo</a></li>
-                <li><a href="#">logo</a></li>
+            <ul class="lg:text-base sm:text-[12px] text-[10px] pt-2 flex md:justify-start justify-center items-center gap-2">
+                <a href="#" class="py-2 px-4 border-2 ease-in-out duration-150 hover:border-transparent hover:bg-dra-purple rounded-md">Kontak Saya</a>
+                <li><a target="_blank" :href="profil.linkSosial.facebook" class="p-4"><i class="md:text-2xl text-[18px] fa-solid fa-facebook"></i></a></li>
+                <li><a target="_blank" :href="profil.linkSosial.instagram" class="p-4"><i class="md:text-2xl text-[18px] fa-solid fa-instagram"></i></a></li>
+                <li><a target="_blank" :href="profil.linkSosial.twitter" class="p-4"><i class="md:text-2xl  text-[18px] fa-solid fa-twitter"></i></a></li>
+                <li><a target="_blank" :href="profil.linkSosial.github" class="p-4"><i class="md:text-2xl  text-[18px] fa-solid fa-github"></i></a></li>
             </ul>
         </div>
-        <img src="./img/5d277e4afa1a623f8e74.png" alt="" class="sm:w-[400px] lg:w-[50%] w-[80%]">
+        <img src="./img/5d277e4afa1a623f8e74.png" alt="" class="sm:w-[380px] md:w-[46%] lg:w-[50%] w-[80%]">
     </section>
-    <section class="container">block</section>
+    <section class="container">tes</section>
+    <section class="container">
+        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-award"></i>
+        <i class="fa-solid fa-headset"></i>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <i class="fa-solid fa-diagram-project"></i>
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </section>
 </template>
 
 <script>
@@ -22,7 +30,13 @@ import { XMarkIcon, Bars3Icon, HomeIcon, SparklesIcon, SwatchIcon, DocumentIcon,
 const profil = {
     namaWeb: 'Naufal.f',
     namaPembuat: 'Naufal Faisal',
-    tanggalUlangTahun: '2005-05-24'
+    tanggalUlangTahun: '2005-05-24',
+    linkSosial: {
+        instagram: 'https://www.instagram.com/naufal.faisal.31/',
+        facebook: 'https://www.facebook.com/naufal.faisal.707/',
+        twitter: 'https://twitter.com/NaufalFaisal31/',
+        github: 'https://github.com/NaufalFaisal707/',
+    }
 }
 
 document.title = `${profil.namaWeb} Web Portfolio`
