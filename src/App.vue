@@ -1,4 +1,59 @@
 <template>
+    <section class="container flex md:flex-row flex-col md:justify-between justify-center items-center gap-4">
+        <div class="grid gap-2">
+            <text class="lg:text-4xl sm:text-3xl text-2xl md:text-start text-center font-bold">Hai, Saya <span class="bg-clip-text transition-all ease-in-out duration-150 cursor-help hover:text-transparent dra-rainbow">{{ profil.namaPembuat }}</span></text>
+            <p class="lg:text-base sm:text-[15px] text-[12px] md:text-start text-center capitalize">sekarang saya berumur {{ ulangTahun() }} tahun, dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan multimedia.</p>
+            <ul class="lg:text-base sm:text-[15px] text-[10px] pt-2 flex md:justify-start justify-center items-center gap-6">
+                <a href="#"><button class="py-2 px-4 border-2 ease-in-out duration-150 hover:border-transparent hover:bg-dra-purple rounded-md">Kontak saya</button></a>
+                <li><a href="#">logo</a></li>
+                <li><a href="#">logo</a></li>
+                <li><a href="#">logo</a></li>
+                <li><a href="#">logo</a></li>
+            </ul>
+        </div>
+        <img src="./img/5d277e4afa1a623f8e74.png" alt="" class="sm:w-[400px] lg:w-[50%] w-[80%]">
+    </section>
+    <section class="container">block</section>
+</template>
+
+<script>
+import { XMarkIcon, Bars3Icon, HomeIcon, SparklesIcon, SwatchIcon, DocumentIcon, PhoneIcon } from "@heroicons/vue/20/solid";
+
+const profil = {
+    namaWeb: 'Naufal.f',
+    namaPembuat: 'Naufal Faisal',
+    tanggalUlangTahun: '2005-05-24'
+}
+
+document.title = `${profil.namaWeb} Web Portfolio`
+
+export default {
+    created() {
+        window.addEventListener('scroll', this.windowScroll);
+        window.addEventListener('resize', this.windowResize);
+        window.innerWidth <= 768 ? this.screenMedium = true : this.screenMedium = false
+    },
+    data() {
+        return {
+            scroll: false,
+            screenMedium: false,
+            menuActive: false,
+            ulangTahun: () => Math.floor((new Date().getTime() - new Date(profil.tanggalUlangTahun).getTime()) / (1000 * 60 * 60 * 24 * 365.25))
+        }
+    },
+    methods: {
+        windowScroll() {
+            window.pageYOffset >= 100 ? this.scroll = true : this.scroll = false
+        },
+        windowResize() {
+            window.innerWidth <= 768 ? this.screenMedium = true : this.screenMedium = false
+        }
+    }
+}
+</script>
+<script setup>defineProps()</script>
+
+<!-- pt-14 -->
     <!-- <nav id="navbar" :class="[(scroll || !menuActive && screenMedium) ? 'bg-dra-curent-line shadow-sm' : '']" class="transition ease-in delay-50 fixed w-[100%]">
         <div class="container items-center justify-between flex-col md:flex h-14">
             <text class="text-xl pr-4">Naufal.f</text>
@@ -14,7 +69,7 @@
             </div>
         </div>
     </nav> -->
-    <header class="fixed w-full bg-dra-curent-line backdrop-blur bg-opacity-5">
+    <!-- <header class="fixed w-full bg-dra-curent-line backdrop-blur bg-opacity-5">
         <div class="container flex justify-between items-center h-[50px] relative">
             <a href="#" class="flex-none">aku flex</a>
             <button v-if="screenMedium">tes</button>
@@ -26,35 +81,4 @@
                 </ul>
             </nav>
         </div>
-    </header>
-    <section class="container h-[100vh] pt-14">block</section>
-    <section class="container h-[100vh] pt-14">block</section>
-</template>
-
-<script>
-import { XMarkIcon, Bars3Icon, HomeIcon, SparklesIcon, SwatchIcon, DocumentIcon, PhoneIcon } from "@heroicons/vue/20/solid";
-
-export default {
-    created() {
-        window.addEventListener('scroll', this.windowScroll);
-        window.addEventListener('resize', this.windowResize);
-        window.innerWidth <= 768 ? this.screenMedium = true : this.screenMedium = false
-    },
-    data() {
-        return {
-            scroll: false,
-            screenMedium: false,
-            menuActive: false,
-        }
-    },
-    methods: {
-        windowScroll() {
-            window.pageYOffset >= 100 ? this.scroll = true : this.scroll = false
-        },
-        windowResize() {
-            window.innerWidth <= 768 ? this.screenMedium = true : this.screenMedium = false
-        }
-    }
-}
-</script>
-<script setup>defineProps()</script>
+    </header> -->

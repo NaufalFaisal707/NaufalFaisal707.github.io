@@ -2,17 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     @apply bg-dra-background text-dra-foreground
 }
 
 .container {
-    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8
+    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 min-h-screen
 }
 
-.icon-xl {
-    @apply h-8 w-8
+/* 
+    Bagian ini dari https://ui.draculatheme.com/colors
+*/
+.dra-rainbow {
+    content: "";
+    background-size: 300% 300%;
+    animation: animatedGradient 6s ease infinite alternate;
+    background-image: linear-gradient(45deg,#ffb86c,#f1fa8c,#ff5555,#ff79c6,#bd93f9,#8be9fd,#50fa7b);
 }
-.icon-sm {
-    @apply h-6 w-6
+
+@keyframes animatedGradient {
+    0% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    to {
+        background-position: 0 50%
+    }
 }
