@@ -59,7 +59,7 @@ body {
     src: url("./font/fa-solid-900.woff2") format("woff2");
 }
 
-.fa-solid::before {
+.fa::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;
