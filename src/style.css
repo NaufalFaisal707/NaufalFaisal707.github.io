@@ -7,11 +7,11 @@
 }
 
 body {
-    @apply bg-dra-background text-dra-foreground
+    @apply bg-dra-background text-dra-foreground;
 }
 
 .container {
-    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 min-h-screen
+    @apply mx-auto min-h-screen max-w-7xl px-2 sm:px-6 lg:px-8;
 }
 
 .color {
@@ -23,23 +23,22 @@ body {
     Bagian ini dari https://ui.draculatheme.com/colors
 */
 .dra-rainbow {
-    content: "";
     background-size: 300% 300%;
     animation: animatedGradient 6s ease infinite alternate;
-    background-image: linear-gradient(45deg,#ffb86c,#f1fa8c,#ff5555,#ff79c6,#bd93f9,#8be9fd,#50fa7b);
+    background-image: linear-gradient(45deg, #ffb86c, #f1fa8c, #ff5555, #ff79c6, #bd93f9, #8be9fd, #50fa7b);
 }
 
 @keyframes animatedGradient {
     0% {
-        background-position: 0 50%
+        background-position: 0 50%;
     }
 
     50% {
-        background-position: 100% 50%
+        background-position: 100% 50%;
     }
 
     to {
-        background-position: 0 50%
+        background-position: 0 50%;
     }
 }
 
@@ -50,12 +49,12 @@ body {
  */
 
 @font-face {
-    font-family: 'FontAwesomeBrand';
+    font-family: "FontAwesomeBrand";
     src: url("./font/fa-brands-400.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'FontAwesomeSolid';
+    font-family: "FontAwesomeSolid";
     src: url("./font/fa-solid-900.woff2") format("woff2");
 }
 
@@ -68,15 +67,55 @@ body {
 }
 
 /* Nav icon */
-.fa-house::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f015";}
-.fa-award::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f559";}
-.fa-headset::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f590";}
-.fa-graduation-cap::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f19d";}
-.fa-diagram-project::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\f542";}
-.fa-wand-magic-sparkles::before {font-family: FontAwesomeSolid; font-weight: 900; content: "\e2ca";}
+.fa-house::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f015";
+}
+.fa-award::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f559";
+}
+.fa-headset::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f590";
+}
+.fa-graduation-cap::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f19d";
+}
+.fa-diagram-project::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f542";
+}
+.fa-wand-magic-sparkles::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\e2ca";
+}
 
 /* social icon */
-.fa-github::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f09b";}
-.fa-twitter::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f099";}
-.fa-facebook::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f09a";}
-.fa-instagram::before {font-family: FontAwesomeBrand; font-weight: 900; content: "\f16d";}
+.fa-github::before {
+    font-family: FontAwesomeBrand;
+    font-weight: 900;
+    content: "\f09b";
+}
+.fa-twitter::before {
+    font-family: FontAwesomeBrand;
+    font-weight: 900;
+    content: "\f099";
+}
+.fa-facebook::before {
+    font-family: FontAwesomeBrand;
+    font-weight: 900;
+    content: "\f09a";
+}
+.fa-instagram::before {
+    font-family: FontAwesomeBrand;
+    font-weight: 900;
+    content: "\f16d";
+}

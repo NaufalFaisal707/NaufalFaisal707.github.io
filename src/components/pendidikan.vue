@@ -1,14 +1,17 @@
 <script setup>
     defineProps({
         dataMentah: Object,
-    })
+    });
 </script>
 
 <template>
-    <section id="pendidikan" class="container ease-in-out duration-500 flex flex-col justify-evenly items-center gap-4">
-        <text class="md:text-2xl text-base"><i class="fa fa-graduation-cap"></i> Pendidikan</text>
+    <section id="pendidikan" class="container flex flex-col items-center justify-evenly gap-4 duration-500 ease-in-out">
+        <text class="text-base md:text-2xl">
+            <i class="fa fa-graduation-cap bg-gradient-to-br from-dra-cyan to-dra-comment bg-clip-text text-transparent"></i>
+            Pendidikan
+        </text>
         <div class="grid grid-cols-4 gap-4">
-            <div class="bg-dra-comment rounded-md px-24 py-16"></div>
+            <div v-for="pendidikan in dataMentah.pendidikan" class="rounded-md bg-dra-comment px-24 py-16">{{ pendidikan.namaSekolah }} {{ pendidikan.tahunBelajar }}</div>
         </div>
     </section>
 </template>

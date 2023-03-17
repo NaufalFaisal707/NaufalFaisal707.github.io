@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.0.15",
+    "vanilla-tilt": "^1.8.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {

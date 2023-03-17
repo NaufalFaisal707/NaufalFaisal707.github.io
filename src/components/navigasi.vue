@@ -1,9 +1,13 @@
-<script setup>
-defineProps({
-    navigasi: Boolean,
-})
+<script>
+    export default {
+        data() {
+            return {
+                navigasi: "haya",
+            };
+        },
+    };
 </script>
 
 <template>
-    <div class="fixed">{{ navigasi }}</div>
+    <div class="fixed text-dra-foreground">{{ navigasi }}</div>
 </template>
