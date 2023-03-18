@@ -1,7 +1,6 @@
 <script setup>
     import navigasi from "./components/navigasi.vue";
     import beranda from "./components/beranda.vue";
-    import pendidikan from "./components/pendidikan.vue";
     import keahlian from "./components/keahlian.vue";
 </script>
 

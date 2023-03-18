@@ -1,6 +1,6 @@
 <template>
     <section id="beranda" class="container flex flex-col-reverse items-center justify-center gap-4 duration-500 ease-in-out md:flex-row md:justify-between">
-        <div class="grid gap-4">
+        <div class="z-50 grid gap-4">
             <text class="text-center text-2xl font-bold sm:text-3xl md:text-start lg:text-4xl">
                 <span class="before:content-['Hai'] after:content-['_saya_']">,</span>
                 <span @mouseenter="ownerHover = true" @mouseleave="ownerHover = false" class="relative">
@@ -20,9 +20,9 @@
         </div>
         <span style="transform-style: preserve-3d" @mouseenter="heroHover = true" @mouseleave="heroHover = false" alt="" class="relative w-[80%] p-[4%] sm:w-[380px] md:w-[120%] lg:w-[80%]" ref="heroTilt">
             <img style="transform: translateZ(26px)" src="../img/hero/aku_esemka.png" alt="" width="" class="z-10" />
-            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(70px)" src="../img/hero/laptop.webp" alt="" width="" class="absolute top-[16%] right-10 z-20 h-[20%] duration-200 ease-in lg:h-[24%]" />
-            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(50px)" src="../img/hero/suprize.webp" alt="" width="" class="absolute left-14 top-14 z-20 h-16 delay-75 duration-200 ease-out" />
-            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(80px)" src="../img/hero/teriri_bg.png" alt="" width="" class="absolute bottom-16 left-16 z-20 h-24 cursor-help duration-200 ease-out" />
+            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(50px)" src="../img/hero/suprize.webp" alt="" width="" class="absolute left-[12%] top-[12%] z-20 h-[16%] delay-75 duration-200 ease-out lg:h-[20%]" />
+            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(100px)" src="../img/hero/laptop.webp" alt="" width="" class="absolute top-[24%] right-[8%] z-20 h-[20%] duration-200 ease-in lg:h-[24%]" />
+            <img @click="play" @mouseleave="stop" :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(140px)" src="../img/hero/teriri_bg.png" alt="" width="" class="absolute bottom-[10%] left-[16%] z-20 h-[16%] cursor-help duration-200 ease-out lg:bottom-16 lg:h-[20%]" />
             <img style="transform: perspective(1000px)" src="../img/hero/bg-purple.svg" alt="" width="" class="absolute top-0 bottom-0 right-0 left-0 z-0 my-auto mx-auto h-[50%]" />
             <img style="transform: perspective(1000px)" :class="[heroHover ? 'opacity-40' : 'opacity-0']" src="../img/hero/bg-purple.svg" alt="" width="" class="absolute top-0 bottom-0 right-0 left-0 z-0 my-auto mx-auto h-[50%] blur-2xl" />
         </span>
@@ -31,7 +31,23 @@
 
 <script>
     import vTilt from "vanilla-tilt";
+    import { useSound } from "@vueuse/sound";
+
+    import interactive from "../sound/teriri/interactive.mp3";
+    import dontTouch from "../sound/teriri/dontTouch.mp3";
+    import moodBadag from "../sound/teriri/moodBadag.mp3";
+    import mood from "../sound/teriri/mood.mp3";
     export default {
+        setup() {
+            const { play, stop } = useSound(interactive, {
+                interrupt: true,
+            });
+
+            return {
+                play,
+                stop,
+            };
+        },
         mounted() {
             vTilt.init(this.$refs.heroTilt, this.tConfig);
         },

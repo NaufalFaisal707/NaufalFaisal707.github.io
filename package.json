@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/sound": "^2.0.1",
     "vanilla-tilt": "^1.8.0",
     "vue": "^3.2.45"
   },
