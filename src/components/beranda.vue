@@ -3,15 +3,12 @@
         <div class="z-50 grid gap-4">
             <text class="text-center text-2xl font-bold sm:text-3xl md:text-start lg:text-4xl">
                 <span class="before:content-['Hai'] after:content-['_saya_']">,</span>
-                <span @mouseenter="ownerHover = true" @mouseleave="ownerHover = false" class="relative">
-                    <text class="dra-rainbow bg-clip-text transition-all duration-150 ease-in hover:text-transparent">{{ namaPembuat }}</text>
-                    <text :class="[ownerHover ? 'opacity-30' : 'opacity-0']" class="dra-rainbow absolute top-0 bottom-0 left-0 -z-50 bg-clip-text blur-sm transition-all duration-150 ease-in hover:text-transparent">{{ namaPembuat }}</text>
-                </span>
+                <text :class="[heroHover ? 'text-transparent' : '']" class="dra-rainbow bg-clip-text transition-all duration-150 ease-in">{{ namaPembuat }}</text>
             </text>
-            <p class="text-center text-[12px] sm:text-[15px] md:text-start lg:text-base">sekarang saya berumur {{ umur() }} tahun, dan saya senang mempelajari sesuatu yang berhubugnan dengan perkembangan teknologi, programing dan multimedia.</p>
+            <p class="text-center text-[12px] before:content-['sekarang_saya_berumur_'] after:content-['_tahun,_dan_saya_senang_mempelajari_sesuatu_yang_berhubungan_dengan_perkembangan_teknologi,_programing_dan_multimedia.'] sm:text-[15px] md:text-start lg:text-base">{{ umur() }}</p>
             <ul class="flex items-center justify-center gap-4 text-[10px] sm:text-[12px] md:justify-start lg:text-base">
                 <li class="hidden sm:block">
-                    <a href="#" class="rounded-md border-2 py-2 px-4 shadow-md duration-200 ease-in-out hover:border-transparent hover:bg-dra-pink hover:shadow-dra-pink">Proyek Saya</a>
+                    <a href="#" class="rounded-md border-2 py-2 px-4 duration-200 ease-in-out hover:border-transparent hover:bg-dra-pink">Proyek Saya</a>
                 </li>
                 <li v-for="sosial in linkSosial">
                     <a target="_blank" :href="sosial.link"><i :title="sosial.mediaSosial" :class="sosial.ikon" class="p-2 text-[18px] transition-all duration-200 ease-in-out hover:text-dra-pink md:text-2xl"></i></a>
@@ -19,12 +16,12 @@
             </ul>
         </div>
         <span style="transform-style: preserve-3d" @mouseenter="heroHover = true" @mouseleave="heroHover = false" alt="" class="relative w-[80%] p-[4%] sm:w-[380px] md:w-[120%] lg:w-[80%]" ref="heroTilt">
-            <img style="transform: translateZ(26px)" src="../img/hero/aku_esemka.png" alt="" width="" class="z-10" />
-            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(50px)" src="../img/hero/suprize.webp" alt="" width="" class="absolute left-[12%] top-[12%] z-20 h-[16%] delay-75 duration-200 ease-out lg:h-[20%]" />
-            <img :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(100px)" src="../img/hero/laptop.webp" alt="" width="" class="absolute top-[24%] right-[8%] z-20 h-[20%] duration-200 ease-in lg:h-[24%]" />
-            <img @click="play" @mouseleave="stop" :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(140px)" src="../img/hero/teriri_bg.png" alt="" width="" class="absolute bottom-[10%] left-[16%] z-20 h-[16%] cursor-help duration-200 ease-out lg:bottom-16 lg:h-[20%]" />
-            <img style="transform: perspective(1000px)" src="../img/hero/bg-purple.svg" alt="" width="" class="absolute top-0 bottom-0 right-0 left-0 z-0 my-auto mx-auto h-[50%]" />
-            <img style="transform: perspective(1000px)" :class="[heroHover ? 'opacity-40' : 'opacity-0']" src="../img/hero/bg-purple.svg" alt="" width="" class="absolute top-0 bottom-0 right-0 left-0 z-0 my-auto mx-auto h-[50%] blur-2xl" />
+            <img loading="lazy" style="transform: translateZ(26px)" src="../img/hero/saya.webp" alt="" height="500" class="z-10" />
+            <img loading="lazy" :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(50px)" src="../img/hero/suprize.webp" alt="" height="" class="absolute left-[12%] top-[12%] z-20 h-[16%] delay-75 duration-200 ease-out lg:h-[20%]" />
+            <img loading="lazy" :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(100px)" src="../img/hero/laptop.webp" alt="" height="" class="absolute top-[24%] right-[8%] z-20 h-[20%] duration-200 ease-in lg:h-[24%]" />
+            <img loading="lazy" title="teriri >_<" @click="updatePlay" @mouseleave="stop" :class="[heroHover ? 'opacity-100' : 'opacity-0']" style="transform: translateZ(140px)" src="../img/hero/teriri_bg.webp" alt="" height="" class="absolute bottom-[10%] left-[16%] z-20 h-[16%] cursor-help duration-200 ease-out lg:bottom-16 lg:h-[20%]" />
+            <img loading="lazy" style="transform: perspective(1000px)" src="../img/hero/bg.svg" alt="" height="" class="absolute top-0 bottom-0 right-0 left-0 z-0 my-auto mx-auto h-[50%]" />
+            <img loading="lazy" style="transform: perspective(1000px)" :class="[heroHover ? 'opacity-40' : 'opacity-0']" src="../img/hero/bg.svg" alt="" height="" class="absolute top-0 bottom-0 right-0 left-0 z-0 my-auto mx-auto h-[50%] blur-2xl" />
         </span>
     </section>
 </template>
@@ -32,20 +29,44 @@
 <script>
     import vTilt from "vanilla-tilt";
     import { useSound } from "@vueuse/sound";
+    import { ref } from "vue";
 
-    import interactive from "../sound/teriri/interactive.mp3";
-    import dontTouch from "../sound/teriri/dontTouch.mp3";
-    import moodBadag from "../sound/teriri/moodBadag.mp3";
-    import mood from "../sound/teriri/mood.mp3";
+    import teriri from "../sound/teriri/teriri_sprite.mp3";
     export default {
         setup() {
-            const { play, stop } = useSound(interactive, {
+            const sprite_teriri = [
+                [0, 4800],
+                [4800, 5000],
+                [10000, 5000],
+                [15400, 3600],
+                [19000, 4300],
+                [23400, 4800],
+                [28600, 3700],
+                [32800, 3400],
+                [36200, 2600],
+                [38800, 4400],
+                [43400, 3200],
+                [47000, 2700],
+                [50000, 4000],
+                [54000, 4400],
+                [58600, 4800],
+            ];
+            const makeRef = ref(sprite_teriri[Math.floor(Math.random() * sprite_teriri.length)]);
+            const { play, stop } = useSound(teriri, {
                 interrupt: true,
+                sprite: {
+                    teriri: makeRef,
+                },
+                volume: 2,
             });
-
+            const updatePlay = () => {
+                // console.log(makeRef.value,makeRef.value = sprite_teriri[Math.floor(Math.random() * sprite_teriri.length)]);
+                makeRef.value = sprite_teriri[Math.floor(Math.random() * sprite_teriri.length)];
+                play({ id: "teriri" });
+            };
             return {
-                play,
                 stop,
+                updatePlay,
             };
         },
         mounted() {
@@ -61,17 +82,19 @@
                     { mediaSosial: "twitter", link: "https://twitter.com/NaufalFaisal31/", ikon: "fa fa-twitter" },
                     { mediaSosial: "github", link: "https://github.com/NaufalFaisal707/", ikon: "fa fa-github" },
                 ],
-                umur: function () {
-                    return Math.floor((new Date().getTime() - new Date(this.tanggalUlangTahun).getTime()) / (1000 * 60 * 60 * 24 * 365.25));
-                },
-                iniKlik: () => console.log("yamete~~ >_<"),
                 heroHover: false,
                 ownerHover: false,
                 tConfig: {
                     max: 4,
                     scale: 1.05,
+                    gyroscope: false,
                 },
             };
+        },
+        methods: {
+            umur() {
+                return Math.floor((new Date().getTime() - new Date(this.tanggalUlangTahun).getTime()) / (1000 * 60 * 60 * 24 * 365.25));
+            },
         },
     };
 </script>

@@ -51,11 +51,13 @@ body {
 @font-face {
     font-family: "FontAwesomeBrand";
     src: url("./font/fa-brands-400.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "FontAwesomeSolid";
     src: url("./font/fa-solid-900.woff2") format("woff2");
+    font-display: swap;
 }
 
 .fa::before {
