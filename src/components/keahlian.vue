@@ -34,11 +34,11 @@
             return {
                 keahlian: {
                     editing: [
-                        { aplikasi: "after effect", belajarDariTahun: "2019", sampai: "sekarang", pemahaman: "70%" },
-                        { aplikasi: "premiere pro", belajarDariTahun: "2022", sampai: "sekarang", pemahaman: "15%" },
-                        { aplikasi: "ilustrator", belajarDariTahun: "2023", sampai: "sekarang", pemahaman: "12%" },
-                        { aplikasi: "photoshop", belajarDariTahun: "2020", sampai: "sekarang", pemahaman: "50%" },
-                        { aplikasi: "Lightroom", belajarDariTahun: "2022", sampai: "sekarang", pemahaman: "33%" },
+                        { aplikasi: "after effect", belajarDariTahun: "2019", sampai: "sekarang", pemahaman: "78%" },
+                        { aplikasi: "premiere pro", belajarDariTahun: "2022", sampai: "sekarang", pemahaman: "24%" },
+                        { aplikasi: "ilustrator", belajarDariTahun: "2023", sampai: "sekarang", pemahaman: "16%" },
+                        { aplikasi: "photoshop", belajarDariTahun: "2020", sampai: "sekarang", pemahaman: "60%" },
+                        { aplikasi: "Lightroom", belajarDariTahun: "2022", sampai: "sekarang", pemahaman: "46%" },
                         { aplikasi: "audation", belajarDariTahun: "2021", sampai: "sekarang", pemahaman: "30%" },
                     ],
                 },

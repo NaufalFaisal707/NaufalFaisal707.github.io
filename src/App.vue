@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <navigasi />
+    <navigasi :nama-web="namaWeb" />
     <beranda />
     <keahlian />
     <proyek />

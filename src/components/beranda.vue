@@ -1,6 +1,6 @@
 <template>
-    <section id="beranda" class="container flex flex-col-reverse items-center justify-center gap-4 duration-500 ease-in-out md:flex-row md:justify-between">
-        <div class="z-50 grid gap-4">
+    <section id="beranda" class="container flex flex-col-reverse items-center justify-center gap-x-4 gap-y-10 duration-500 ease-in-out md:flex-row md:justify-between">
+        <div class="z-40 grid gap-4">
             <text class="text-center text-2xl font-bold sm:text-3xl md:text-start lg:text-4xl">
                 <span class="before:content-['Hai'] after:content-['_saya_']">,</span>
                 <text :class="[heroHover ? 'text-transparent' : '']" class="dra-rainbow bg-clip-text transition-all duration-150 ease-in">{{ namaPembuat }}</text>
@@ -8,10 +8,10 @@
             <p class="text-center text-[12px] before:content-['sekarang_saya_berumur_'] after:content-['_tahun,_dan_saya_senang_mempelajari_sesuatu_yang_berhubungan_dengan_perkembangan_teknologi,_programing_dan_multimedia.'] sm:text-[15px] md:text-start lg:text-base">{{ umur() }}</p>
             <ul class="flex items-center justify-center gap-4 text-[10px] sm:text-[12px] md:justify-start lg:text-base">
                 <li class="hidden sm:block">
-                    <a href="#" class="rounded-md border-2 py-2 px-4 duration-200 ease-in-out hover:border-transparent hover:bg-dra-pink">Proyek Saya</a>
+                    <a href="#proyek" class="rounded-md border-2 py-2 px-4 duration-200 ease-in-out hover:border-transparent hover:bg-dra-pink">Proyek Saya</a>
                 </li>
                 <li v-for="sosial in linkSosial">
-                    <a target="_blank" :href="sosial.link"><i :title="sosial.mediaSosial" :class="sosial.ikon" class="p-2 text-[18px] transition-all duration-200 ease-in-out hover:text-dra-pink md:text-2xl"></i></a>
+                    <a target="_blank" :href="sosial.link"><i :title="sosial.mediaSosial" :class="sosial.ikon" class="p-2 text-[24px] transition-all duration-200 ease-in-out hover:text-dra-pink md:text-2xl"></i></a>
                 </li>
             </ul>
         </div>
@@ -57,10 +57,9 @@
                 sprite: {
                     teriri: makeRef,
                 },
-                volume: 2,
+                volume: 2.4,
             });
             const updatePlay = () => {
-                // console.log(makeRef.value,makeRef.value = sprite_teriri[Math.floor(Math.random() * sprite_teriri.length)]);
                 makeRef.value = sprite_teriri[Math.floor(Math.random() * sprite_teriri.length)];
                 play({ id: "teriri" });
             };
@@ -86,7 +85,7 @@
                 ownerHover: false,
                 tConfig: {
                     max: 4,
-                    scale: 1.05,
+                    scale: 1.1,
                     gyroscope: false,
                 },
             };

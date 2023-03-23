@@ -11,12 +11,16 @@ body {
 }
 
 .container {
-    @apply mx-auto min-h-screen max-w-7xl px-2 sm:px-6 lg:px-8;
+    @apply mx-auto min-h-[100svh] max-w-7xl px-2 sm:px-6 lg:px-8;
 }
 
 .color {
     fill: "currentColor";
     color: #50fa7b;
+}
+
+.max-w-me {
+    width: calc(100vw - 8%);
 }
 
 /* 
@@ -42,11 +46,11 @@ body {
     }
 }
 
-/*!
- * Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- * Copyright 2022 Fonticons, Inc.
- */
+/*
+    Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com
+    License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+    Copyright 2022 Fonticons, Inc.
+*/
 
 @font-face {
     font-family: "FontAwesomeBrand";
@@ -73,6 +77,16 @@ body {
     font-family: FontAwesomeSolid;
     font-weight: 900;
     content: "\f015";
+}
+.fa-bar::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f0c9";
+}
+.fa-xclose::before {
+    font-family: FontAwesomeSolid;
+    font-weight: 900;
+    content: "\f00d";
 }
 .fa-award::before {
     font-family: FontAwesomeSolid;
