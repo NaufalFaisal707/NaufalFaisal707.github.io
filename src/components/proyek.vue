@@ -1,5 +1,5 @@
 <template>
-    <section id="proyek" class="container grid place-content-center justify-items-center gap-y-16 p-14 duration-500 ease-in-out">
+    <section id="proyek" class="container grid place-content-center justify-items-center gap-y-16 py-16 duration-500 ease-in-out">
         <text class="text-[20px] font-bold md:text-2xl">
             <span class="relative after:content-['_proyek_Saya']">
                 <i class="fa fa-diagram-project absolute bg-gradient-to-br from-dra-cyan to-dra-green bg-clip-text text-transparent opacity-50 blur-md"></i>

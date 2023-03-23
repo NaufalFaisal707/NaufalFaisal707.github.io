@@ -1,5 +1,5 @@
 <template>
-    <section id="keahlian" class="container grid place-content-center justify-items-center gap-y-16 p-14 duration-500 ease-in-out">
+    <section id="keahlian" class="container grid place-content-center justify-items-center gap-y-16 p-16 duration-500 ease-in-out">
         <text class="text-[20px] font-bold after:content-['_kemampuan_&_Keahlian'] md:text-2xl">
             <span class="relative">
                 <i class="fa fa-wand-magic-sparkles absolute bg-gradient-to-br from-dra-orange to-dra-yellow bg-clip-text text-transparent opacity-50 blur-md"></i>

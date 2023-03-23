@@ -1,6 +1,6 @@
 <template>
     <nav :class="[scroll ? 'bg-dra-comment bg-opacity-30 shadow-lg' : '']" class="fixed z-50 w-[100vw] backdrop-blur-sm duration-200 ease-out">
-        <div class="max-w-me relative mx-auto h-16 lg:max-w-7xl">
+        <div class="max-w-me relative mx-auto h-14 lg:max-w-7xl">
             <text class="absolute left-0 top-0 bottom-0 my-auto h-max text-xl">{{ namaWeb }}</text>
             <button @click="toggleMenu" class="absolute right-0 top-0 bottom-0 my-auto block h-max text-xl md:hidden">
                 <i v-if="menuOpen" class="fa fa-xclose text-lg"></i>
@@ -36,18 +36,16 @@
             };
         },
         mounted() {
-            window.addEventListener("scroll", this.pageScroll);
-            window.addEventListener("resize", this.pageResize);
-            this.pageResize;
+            window.addEventListener("scroll", this.pageBehavior);
+            window.addEventListener("resize", this.pageBehavior);
+            this.pageBehavior;
         },
         methods: {
             toggleMenu() {
                 this.menuOpen = !this.menuOpen;
             },
-            pageScroll() {
+            pageBehavior() {
                 window.pageYOffset >= 100 ? (this.scroll = true) : (this.scroll = false);
-            },
-            pageResize() {
                 window.innerWidth < 768 ? (this.pageMedium = true) : (this.pageMedium = false);
             },
         },
