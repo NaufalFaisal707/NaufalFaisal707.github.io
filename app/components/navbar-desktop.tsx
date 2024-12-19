@@ -26,7 +26,7 @@ export default function NavbarDesktop() {
               Proyek
             </Button>
           </NavLink>
-          <NavLink prefetch="intent" to="#">
+          <NavLink prefetch="intent" to="/kontak">
             <Button variant="ghost">
               <Mail />
               Kontak Saya

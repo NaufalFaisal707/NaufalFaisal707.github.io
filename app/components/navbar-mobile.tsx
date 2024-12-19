@@ -33,7 +33,7 @@ export default function NavbarMobile() {
             Proyek
           </Button>
         </NavLink>
-        <NavLink prefetch="intent" to="#">
+        <NavLink prefetch="intent" to="/kontak">
           <Button
             variant="ghost"
             className="grid place-items-center min-h-fit text-[12px]"
