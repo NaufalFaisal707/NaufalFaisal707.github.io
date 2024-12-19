@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <Container>
       <h1 className="text-xl p-4 font-bold">
-        selamat datang di web port folio saya.
+        selamat datang di web portfolio saya.
       </h1>
       <Outlet />
     </Container>
