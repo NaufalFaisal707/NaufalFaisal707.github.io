@@ -7,7 +7,9 @@ export default function Page() {
   return (
     <Container>
       <NavbarDesktop />
-      <Outlet />
+      <div className="grow mx-4 overflow-auto flex flex-col *:grow">
+        <Outlet />
+      </div>
       <NavbarMobile />
     </Container>
   );
