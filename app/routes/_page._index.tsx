@@ -14,7 +14,7 @@ export default function IndexPage() {
           Full Stack React Developer.
         </h1>
         <div>
-          <Button variant="outline" asChild>
+          <Button asChild>
             <Link to="/proyek">
               Proyek Saya <MoveRight />
             </Link>
