@@ -24,7 +24,10 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id">
+    <html
+      lang="id"
+      className="scroll-smooth  scroll-pb-[var(--mobile-navbar-height)] md:scroll-pt-[var(--desktop-navbar-height)]"
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

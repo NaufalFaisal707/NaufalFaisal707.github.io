@@ -1,70 +1,32 @@
-import { NavLink } from "@remix-run/react";
 import { House, Sparkles, Pickaxe, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "@remix-run/react";
 
-export default function NavbarLink() {
-  return (
-    <>
-      <NavLink
-        prefetch="intent"
-        to="/"
-        className={({ isActive }) =>
-          isActive ? "rounded-md bg-neutral-100" : ""
-        }
+const navigation = [
+  { name: "Beranda", icons: <House /> },
+  { name: "Keahlian", icons: <Sparkles /> },
+  { name: "Proyek", icons: <Pickaxe /> },
+  { name: "Kontak", icons: <Mail /> },
+];
+
+export default function NavbarLink({
+  setTarget,
+}: {
+  setTarget: (e: EventTarget) => void;
+}) {
+  return navigation.map(({ name, icons }, key) => {
+    return (
+      <Button
+        onClick={({ target }) => setTarget(target)}
+        variant="link"
+        key={key}
+        asChild
+        className="grid md:flex place-items-center min-h-fit md:text-base text-[12px]"
       >
-        <Button
-          variant="ghost"
-          className="grid md:flex place-items-center min-h-fit md:text-base text-[12px]"
-        >
-          <House />
-          Beranda
-        </Button>
-      </NavLink>
-      <NavLink
-        prefetch="intent"
-        to="/keahlian"
-        className={({ isActive }) =>
-          isActive ? "rounded-md bg-neutral-100" : ""
-        }
-      >
-        <Button
-          variant="ghost"
-          className="grid md:flex place-items-center min-h-fit md:text-base text-[12px]"
-        >
-          <Sparkles />
-          Keahlian
-        </Button>
-      </NavLink>
-      <NavLink
-        prefetch="intent"
-        to="/proyek"
-        className={({ isActive }) =>
-          isActive ? "rounded-md bg-neutral-100" : ""
-        }
-      >
-        <Button
-          variant="ghost"
-          className="grid md:flex place-items-center min-h-fit md:text-base text-[12px]"
-        >
-          <Pickaxe />
-          Proyek
-        </Button>
-      </NavLink>
-      <NavLink
-        prefetch="intent"
-        to="/kontak"
-        className={({ isActive }) =>
-          isActive ? "rounded-md bg-neutral-100" : ""
-        }
-      >
-        <Button
-          variant="ghost"
-          className="grid md:flex place-items-center min-h-fit md:text-base text-[12px]"
-        >
-          <Mail />
-          Kontak
-        </Button>
-      </NavLink>
-    </>
-  );
+        <Link to={"#" + name.toLowerCase()}>
+          {icons} {name}
+        </Link>
+      </Button>
+    );
+  });
 }
