@@ -4,8 +4,10 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import { AnimatePresence } from "framer-motion";
 
 import "./tailwind.css";
 
@@ -26,7 +28,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="id"
-      className="scroll-smooth  scroll-pb-[var(--mobile-navbar-height)] md:scroll-pt-[var(--desktop-navbar-height)]"
+      className="scroll-smooth scroll-pb-[var(--mobile-navbar-height)] md:scroll-pt-[var(--desktop-navbar-height)]"
     >
       <head>
         <meta charSet="utf-8" />
@@ -44,7 +46,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Outlet key={location.pathname} />
+    </AnimatePresence>
+  );
 }
 
 export function HydrateFallback() {

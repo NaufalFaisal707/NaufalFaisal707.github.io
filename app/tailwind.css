@@ -4,16 +4,12 @@
 
 html,
 body {
-  /* @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  } */
+  overflow-x: hidden;
 }
 
 :root {
   --desktop-navbar-height: 4rem;
-  --mobile-navbar-height: 4rem;
+  --mobile-navbar-height: 5rem;
 }
 
 @layer base {
