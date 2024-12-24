@@ -4,10 +4,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLocation,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { AnimatePresence } from "framer-motion";
 
 import "./tailwind.css";
 
@@ -46,13 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const location = useLocation();
-
-  return (
-    <AnimatePresence mode="wait">
-      <Outlet key={location.pathname} />
-    </AnimatePresence>
-  );
+  return <Outlet />;
 }
 
 export function HydrateFallback() {

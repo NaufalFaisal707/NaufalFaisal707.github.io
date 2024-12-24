@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="98.631348"
-   height="100.63134"
-   viewBox="0 0 32.877116 33.54378"
+   width="130.83487"
+   height="133.46573"
+   viewBox="0 0 43.611623 44.488576"
    version="1.1"
    id="svg1"
    xml:space="preserve"
@@ -21,9 +21,81 @@
          id="stop30" /><stop
          style="stop-color:#3c6eb4;stop-opacity:0;"
          offset="1"
-         id="stop31" /></linearGradient></defs><g
+         id="stop31" /></linearGradient><style
+       id="style1">
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 32px;
+      }
+    </style><style
+       id="style1-7">
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 32px;
+      }
+    </style><style
+       id="style1-0">
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 32px;
+      }
+    </style><style
+       id="style1-06">
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 32px;
+      }
+    </style><style
+       id="style1-6">
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 32px;
+      }
+    </style><style
+       id="style1-8">
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 32px;
+      }
+    </style></defs><g
      id="g97"
-     transform="matrix(0.68453365,0.10910653,-0.10910653,0.68453365,-294.58163,-156.88118)"
+     transform="matrix(0.90043619,0.14351883,-0.14351883,0.90043619,-387.3104,-206.17912)"
      style="stroke-width:1.44264"><rect
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0961758;stroke-dasharray:none;stroke-opacity:1"
        id="rect95"
@@ -31,8 +103,8 @@
        height="42.002144"
        x="460.87381"
        y="154.87642"
-       rx="5.7705545"
-       ry="5.7705545" /><g
+       rx="4.3869166"
+       ry="4.3869166" /><g
        style="fill:#ffffff;stroke-width:9.87064"
        id="g94"
        transform="matrix(0.04871809,0,0,0.04871809,471.86331,164.35566)"><path
@@ -52,5 +124,5 @@
        height="42.002144"
        x="462.12631"
        y="156.62457"
-       rx="5.7705545"
-       ry="5.7705545" /></g></svg>
+       rx="4.3869166"
+       ry="4.3869166" /></g></svg>
