@@ -1,6 +1,4 @@
 import { Outlet, useLocation } from "@remix-run/react";
-import NavbarDesktop from "~/components/navbar-desktop";
-import NavbarMobile from "~/components/navbar-mobile";
 import { motion } from "framer-motion";
 
 export default function Index() {
@@ -8,7 +6,7 @@ export default function Index() {
 
   return (
     <>
-      <NavbarDesktop className="sticky top-0 backdrop-blur bg-opacity-80 bg-white" />
+      {/* <NavbarDesktop className="sticky top-0 backdrop-blur bg-opacity-80 bg-white" /> */}
 
       <motion.div
         key={location.pathname}
@@ -20,7 +18,7 @@ export default function Index() {
         <Outlet />
       </motion.div>
 
-      <NavbarMobile className="sticky bottom-0 backdrop-blur bg-opacity-80 bg-white" />
+      {/* <NavbarMobile className="sticky bottom-0 backdrop-blur bg-opacity-80 bg-white" /> */}
     </>
   );
 }
