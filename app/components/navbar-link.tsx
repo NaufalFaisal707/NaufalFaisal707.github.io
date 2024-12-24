@@ -13,21 +13,16 @@ import {
 
 const navigation = [
   { link: "/", name: "Beranda", icons: <House /> },
-  { link: "/keahlian", name: "Keahlian", icons: <Sparkles /> },
+  { link: "/tentang", name: "Tentang", icons: <Sparkles /> },
   { link: "/proyek", name: "Proyek", icons: <Pickaxe /> },
 ];
 
-export default function NavbarLink({
-  setTarget,
-}: {
-  setTarget: (e: EventTarget) => void;
-}) {
+export default function NavbarLink() {
   return (
     <>
       {navigation.map(({ link, name, icons }, key) => {
         return (
           <Button
-            onClick={({ target }) => setTarget(target)}
             variant="link"
             key={key}
             asChild
@@ -39,7 +34,7 @@ export default function NavbarLink({
           </Button>
         );
       })}
-      <Dialog>
+      {/* <Dialog>
         <DialogTrigger asChild>
           <Button
             variant="secondary"
@@ -74,7 +69,7 @@ export default function NavbarLink({
             </div>
           </DialogHeader>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </>
   );
 }

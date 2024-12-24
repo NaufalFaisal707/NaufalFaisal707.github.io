@@ -15,7 +15,7 @@ export const clientLoader = () => {
 export default function BerandaComponent() {
   const loaderData = useLoaderData<typeof clientLoader>();
 
-  const ContainerXl = ({ children }: { children: ReactNode }) => {
+  const Container5xl = ({ children }: { children: ReactNode }) => {
     return (
       <div className="mx-auto max-w-5xl h-full flex items-center relative min-h-fit">
         {children}
@@ -26,7 +26,7 @@ export default function BerandaComponent() {
   return (
     <>
       <section className="h-svh mx-4">
-        <ContainerXl>
+        <Container5xl>
           <div className="flex flex-col w-fit max-w-[30rem] gap-y-2">
             <motion.span
               initial={{ translateY: 50, opacity: 0 }}
@@ -170,7 +170,7 @@ export default function BerandaComponent() {
               />
             </div>
           </div>
-        </ContainerXl>
+        </Container5xl>
       </section>
     </>
   );
