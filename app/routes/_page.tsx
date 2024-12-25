@@ -10,7 +10,7 @@ export default function Index() {
       {/* <NavbarDesktop className="sticky top-0 backdrop-blur bg-opacity-80 bg-white" /> */}
 
       <nav className="max-w-5xl min-h-fit absolute w-full translate-x-[50%] right-[50%] top-8 z-50">
-        <div className="ms-auto w-fit rounded-s-md flex gap-2">
+        <div className="ms-auto w-fit rounded-s-md flex gap-2 relative">
           <NavbarLink />
         </div>
       </nav>

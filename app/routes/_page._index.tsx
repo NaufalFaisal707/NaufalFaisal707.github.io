@@ -1,8 +1,8 @@
 import { ArrowRight, Github, Instagram, Mail } from "lucide-react";
 import { useLoaderData } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Container5xl from "~/components/container-5xl";
 
 export const clientLoader = () => {
   return [
@@ -15,18 +15,10 @@ export const clientLoader = () => {
 export default function BerandaComponent() {
   const loaderData = useLoaderData<typeof clientLoader>();
 
-  const Container5xl = ({ children }: { children: ReactNode }) => {
-    return (
-      <div className="mx-auto max-w-5xl h-full flex items-center relative min-h-fit">
-        {children}
-      </div>
-    );
-  };
-
   return (
     <>
       <section className="h-svh mx-4">
-        <Container5xl>
+        <Container5xl className="justify-start">
           <div className="flex flex-col w-fit max-w-[30rem] gap-y-2">
             <motion.span
               initial={{ translateY: 50, opacity: 0 }}

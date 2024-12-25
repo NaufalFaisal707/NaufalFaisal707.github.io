@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "~/components/ui/dialog";
+import { useEffect, useState } from "react";
 
 const navigation = [
   { link: "/", name: "Beranda", icons: <House /> },
@@ -18,11 +19,31 @@ const navigation = [
 ];
 
 export default function NavbarLink() {
+  const [targetNav, setTargetNav] = useState<EventTarget | null>(null);
+
+  useEffect(() => {
+    const navFocusIndicator = document.getElementById("nav-focus-desktop");
+
+    if (targetNav && navFocusIndicator) {
+      const focusElement = targetNav as HTMLElement;
+      const focusPosition = focusElement.getBoundingClientRect();
+
+      // Hitung posisi relatif elemen target terhadap parent container
+      const parentRect = focusElement.parentElement?.getBoundingClientRect();
+      const leftPosition = focusPosition.left - (parentRect?.left || 0);
+
+      // Perbarui gaya elemen `#nav-focus`
+      navFocusIndicator.style.width = `${focusPosition.width}px`;
+      navFocusIndicator.style.left = `${leftPosition}px`;
+    }
+  }, [targetNav]);
+
   return (
     <>
       {navigation.map(({ link, name, icons }, key) => {
         return (
           <Button
+            onClick={({ target }) => setTargetNav(target)}
             variant="link"
             key={key}
             asChild
@@ -34,7 +55,12 @@ export default function NavbarLink() {
           </Button>
         );
       })}
-      {/* <Dialog>
+
+      <span
+        id="nav-focus-desktop"
+        className="absolute h-full bg-neutral-100 -z-10 rounded-md duration-150 ease-in-out"
+      />
+      <Dialog>
         <DialogTrigger asChild>
           <Button
             variant="secondary"
@@ -69,7 +95,7 @@ export default function NavbarLink() {
             </div>
           </DialogHeader>
         </DialogContent>
-      </Dialog> */}
+      </Dialog>
     </>
   );
 }

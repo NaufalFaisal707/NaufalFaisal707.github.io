@@ -1,10 +1,13 @@
+import Container5xl from "~/components/container-5xl";
+
 export default function ProyekPage() {
   return (
-    <section
-      id="proyek"
-      className="flex items-center justify-center min-h-[calc(100svh_-_var(--mobile-navbar-height))] md:min-h-[calc(100svh_-_var(--desktop-navbar-height))]"
-    >
-      <h1>Di tunggu ya, sedang maintenance nih ~</h1>
+    <section className="h-svh mx-4">
+      <Container5xl className="justify-center">
+        <div className="flex flex-col w-fit max-w-[30rem] gap-y-2">
+          <h1>Di tunggu ya, sedang maintenance nih ~</h1>
+        </div>
+      </Container5xl>
     </section>
   );
 }
