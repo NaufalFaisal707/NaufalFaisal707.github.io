@@ -48,8 +48,9 @@ export default function BerandaComponent() {
               }}
               className="md:text-base text-sm"
             >
-              Saya menggunakan framework React untuk membuat aplikasi berbasis
-              web, karena fleksibilitas dan popularitasnya yang cukup baik.
+              Saya membuat aplikasi web dengan metode server-side rendering
+              (SSR) dan file-based routing menggunakan framework React dan Remix
+              untuk membangun aplikasi web yang cepat dan SEO-friendly.
             </motion.p>
 
             <motion.div
